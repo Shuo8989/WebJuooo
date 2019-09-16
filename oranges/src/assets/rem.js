@@ -5,9 +5,9 @@
             var clientWidth = docEl.clientWidth;
             if (!clientWidth) return;
             if(clientWidth>=640){
-                docEl.style.fontSize = '50px';
+                docEl.style.fontSize = '54px';
             }else{
-                docEl.style.fontSize = 50 * (clientWidth /640) + 'px';
+                docEl.style.fontSize =100*(clientWidth /1000) + 'px';
             }
         };
 

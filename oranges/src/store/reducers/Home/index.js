@@ -6,6 +6,9 @@ export default (state=inisState,{type,payload})=>{
         case homeType.UP_CLASSIFY_HOME:
             state.ClassifyHome = payload;
             break; 
+        case homeType.UP_VIP_SCHEDULAR:
+            state.vipHomeSchedular = payload;
+            break; 
         default:
             break;
     }

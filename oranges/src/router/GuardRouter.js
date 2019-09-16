@@ -5,6 +5,13 @@ import {
 } from 'react-router-dom';
 import Punlicnav from '../components/punlic/Punlicnav'
 class GuaudRouter extends React.Component{
+    // componentDidMount(){
+    //     if(this.props.meta.isLogin){
+    //         if(!localStorage.token){
+    //             this.props.history.push('/passport/login')
+    //         }
+    //     }
+    // }
     render(){ 
         const propst=this.props;
         return(

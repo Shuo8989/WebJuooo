@@ -1,0 +1,37 @@
+.myjuooo{
+    /*background-color: #61dafb;*/
+    font-size: 0.333rem;
+}
+.myjuooo_top{
+    width: 10.4167rem;
+    height: 5.8194rem;
+    position: relative;
+    background-image: url("../img/mybgPage.png");
+    background-size:100% ;
+}
+.myjuooo-set{
+    position: absolute;
+    right: 0.75rem;
+    top: 0.4rem;
+    color: #ffffff;
+    font-size: .48rem;
+}
+.myjuooo-me{
+    width: 9.2rem;
+    height: 4.921rem;
+    position: absolute;
+    background: #fff;
+    box-shadow: 0 0.05333rem 0.4rem 0.02667rem rgba(35,35,35,.08);
+    border-radius: .10667rem;
+    margin: 1.53333rem .4rem 0;
+}
+.myjuooo-mypic{
+    width: 1.61rem;
+    height: 1.61rem;
+    background-image: url("../img/myjuooo-mypic.png");
+    background-size: 100%;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: -.32rem;
+    margin-left: 0.416rem;
+}

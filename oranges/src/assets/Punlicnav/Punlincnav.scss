@@ -4,7 +4,7 @@
     bottom: 0;
     right: 0;
     width: 100%;
-    height:2rem;
+    height:1.3rem;
     display: flex;
     justify-content: space-around;
     z-index: 9999;
@@ -13,16 +13,15 @@
         color: #232323;
     }
     i{
-        font-size: 0.8rem;
         display: block;
-        margin-top: 0.1rem;
-        line-height: 0.1rem;
+        margin: 0 auto;
+        width: 0.8rem;
+        height: 0.8rem;
     }
     span {
-        font-size: 0.35rem;
+        font-size:0.27rem;
         display: block;
-        padding-top:0.4rem;
-        line-height: 0.35rem;
+        color:#232323;
     }
     .active-Link {
         color: red;

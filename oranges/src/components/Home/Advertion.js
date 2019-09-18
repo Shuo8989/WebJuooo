@@ -13,7 +13,7 @@ export default class Advertion extends Component{
                     {
                         classifyHome.classifyHome.classify_list.map((v,i)=>(
                             <div key={i} className={"label-item__block"}>
-                                <NavLink   className={"label-item__block__column"} to={''}>
+                                <NavLink   className={"label-item__block__column"} to={'/show/showsLibrary'}>
                                     <img src={v.pic} ait=""/>
                                     <span>{v.name}</span>
                                 </NavLink>

@@ -22,7 +22,8 @@ import Login from '../views/Login/Login'
 import ResetPassword from '../views/Login/ResetPassword'
 import Verify from '../views/Login/Verify'
 import SetPassword from '../views/Login/SetPassword'
-
+//演出
+import Vocalconcert from '../components/Show/Vocal_concert'
 //vip+会员
 export default[
     {//首页
@@ -250,5 +251,16 @@ export default[
             isFooter:false,
             isLogin:true,
         }  
+    },
+    {
+        path:'/show/showsLibrary',
+        context:'演唱会',
+        component:Vocalconcert,
+        exact:true,
+        meta:{
+            title:'演出',
+            isFooter:false,
+            isLogin:false
+        }
     }
 ]

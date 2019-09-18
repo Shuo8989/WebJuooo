@@ -1,22 +1,24 @@
 import React,{Component} from 'react';
 import '../../assets/Home/Advertion-wrap.scss';
 import {
-    NavLink
+    NavLink,
+    withRouter
 } from 'react-router-dom';
-export default class Advertion extends Component{
+ class Advertion extends Component{
     render(){
         const classifyHome=this.props.classifyHome;
-        console.log(classifyHome)
         return(
             <div className={'advertion-wrap'}>
                 <div className={"lable-item"}>
                     {
                         classifyHome.classifyHome.classify_list.map((v,i)=>(
                             <div key={i} className={"label-item__block"}>
-                                <NavLink   className={"label-item__block__column"} to={''}>
-                                    <img src={v.pic} ait=""/>
-                                    <span>{v.name}</span>
-                                </NavLink>
+
+                                    <NavLink   className={"label-item__block__column"} to={'/show/showsLibrary'}>
+                                        <img src={v.pic} ait=""/>
+                                        <span>{v.name}</span>
+                                    </NavLink>
+
                             </div>
                         ))
                     }
@@ -65,3 +67,4 @@ export default class Advertion extends Component{
         )
     }
 }
+export default withRouter(Advertion)

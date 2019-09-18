@@ -8,7 +8,7 @@ export default class Navigation extends React.Component{
     render() {
         return(
                 <ul>
-                    <li>
+                    <li className={"one"}>
                         <NavLink to={"/show/showsLibrary"}>全部</NavLink>
                     </li>
                     <li>

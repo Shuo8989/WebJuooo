@@ -1,16 +1,21 @@
 import React from 'react'
 import {
-    NavLink
+    NavLink,
+    withRouter
 } from "react-router-dom";
 import '../../../assets/Show/Vocal_concert/index.css';
-import Navigation from '../Navigation'
-import axios from 'axios'
+import { Drawer, Button, Radio } from 'antd';
+import axios from 'axios';
+const RadioGroup = Radio.Group;
 
-export default class Show extends React.Component{
-    constructor(){
-        super();
+class Show extends React.Component{
+    constructor(props){
+        super(props);
         this.state = {
-            showList: []
+            visible: false,
+            showList: [],
+            city : [],
+            page : 1
         }
     }
     render() {
@@ -18,7 +23,7 @@ export default class Show extends React.Component{
             <div className={"app"}>
                 <div className={"page show_library"}>
                     <section className={"title library-title"}>
-                        <i className={"iconfont iconfanhui1 title_back"}></i>
+                        <i className={"iconfont iconfanhui1 title_back"} onClick={this.back.bind(this)}></i>
                         <span className={"title__text"}>演出</span>
                         <i className={"iconfont iconsangedian1 title__ellipsis"}></i>
                     </section>
@@ -55,7 +60,7 @@ export default class Show extends React.Component{
                             </ul>
                         </div>
                         <div className={"city_wrap"}>
-                            <span className={"city"}>全国</span>
+                            <span className={"city"} onClick={this.showDrawer}>全国</span>
                             <span className={"city_icon iconfont icondibiao"}></span>
                         </div>
                     </div>
@@ -72,7 +77,7 @@ export default class Show extends React.Component{
                                                     </a>
                                                 </div>
                                                 <div className={"item-desc"}>
-                                                    <p className={"show-date"}>{v.show_time_top}</p>
+                                                    <p className={"show-date"}><strong>{v.show_time_top}</strong></p>
                                                     <a href="">
                                                         <h3 className={"text-double"}>{v.name}</h3>
                                                     </a>
@@ -85,25 +90,72 @@ export default class Show extends React.Component{
                                 }
                             </div>
                         </section>
+                        <div className={"more"}>
+                            <a onClick={this.Loadmore.bind(this)}>加载更多</a>
+                        </div>
                     </div>
                 </div>
+                    <Drawer
+                        title="城市"
+                        placement="right"
+                        closable={false}
+                        onClose={this.onClose}
+                        visible={this.state.visible}
+                    >
+                        <ul className={"list"}>
+                        {
+                            this.state.city.map((v,i)=>(
+                                    <li key={i}>{v.name}</li>
+                            ))
+                        }
+                        </ul>
+                    </Drawer>
             </div>
         )
     }
     componentDidMount() {
-        axios.get("https://api.juooo.com/Show/Search/getShowList?category=0&city_id=0&page=1&keywords=&version=6.0.5&referer=2")
+        axios.get("https://m.juooo.com/Search/getCity?version=6.0.5&referer=2")
             .then(({data})=>{
                 this.setState({
-                    showList : data.list
+                    city : data.city_list
                 })
             })
+        this.setcategory()
+    }
+    back(){
+        this.props.history.go(-1)
     }
     setcategory(category = 0){
-        axios.get("https://api.juooo.com/Show/Search/getShowList?category="+category+"&city_id=0&page=1&keywords=&version=6.0.5&referer=2")
+        let page = this.state.page
+        axios.get("https://api.juooo.com/Show/Search/getShowList?category="+category+"&city_id=0&page="+page+"&keywords=&version=6.0.5&referer=2")
             .then(({data})=>{
                 this.setState({
                     showList : data.list
                 })
             })
     }
+    Loadmore(category = 0){
+        this.setState({
+            page : this.state.page++
+        })
+        let page = this.state.page
+        axios.get("https://api.juooo.com/Show/Search/getShowList?category="+category+"&city_id=0&page="+page+"&keywords=&version=6.0.5&referer=2")
+            .then(({data})=>{
+                this.setState({
+                    showList : this.state.showList.concat(data.list)
+                })
+            })
+    }
+    showDrawer = () => {
+        this.setState({
+            visible: true,
+        });
+    };
+
+    onClose = () => {
+        this.setState({
+            visible: false,
+        });
+    };
 }
+export default withRouter(Show)

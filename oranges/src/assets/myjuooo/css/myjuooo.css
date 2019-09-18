@@ -184,10 +184,12 @@ body{
     height: 33px;
 }
 .myjuooo_my_msg{
+    /*客服*/
     height: 16px;
     width: 100%;
     color: #ff6743;
 }
 .myjuooo_my_msg a {
+    /*客服文字*/
     color: #232323;
 }

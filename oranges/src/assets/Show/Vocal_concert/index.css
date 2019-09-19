@@ -1,0 +1,214 @@
+
+.show{
+    width: 100%;
+    height: 100%;
+    font-size: 0.33rem;
+    text-align: center;
+    position: relative;
+}
+.library_title{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+.title{
+    height: 1.17333rem;
+    width: 100%;
+    background-color: #fff;
+    font-size: .48rem;
+    color: #232323;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: fixed;
+    border-bottom: 1px solid #ebebeb;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 100;
+}
+.title_text{
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+}
+.title_back{
+    padding: .29333rem .53333rem .29333rem .26667rem;
+    font-size: .48rem;
+}
+.title__ellipsis{
+    font-size: .48rem;
+    padding: .29333rem .4rem;
+}
+.show_type_wrap{
+    position: fixed;
+    display: flex;
+    padding-left: .4rem;
+    padding-bottom: .26667rem;
+    padding-top: .26667rem;
+    background-color: #fefefe;
+    left: 0;
+    top: 1.17333rem;
+    z-index: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+.show_type_wrap .show_type{
+    height: 0.8rem;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    width: 7.33333rem;
+    margin-right: .13333rem;
+    ::-webkit-scrollbar
+}
+.show_type_wrap .show_type ul::-webkit-scrollbar { width: 0 !important }
+.show_type_wrap .show_type ul{
+    overflow: auto;
+    white-space: nowrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.show_type_wrap .show_type li a{
+    font-size: .4rem;
+    color: #999999;
+    padding: 0 .13333rem;
+    border-bottom: .04rem solid transparent;
+    border-radius: .02667rem;
+    margin-right: .4rem;
+}
+
+.show_type_wrap .show_type li .active:active{
+    color: #ff6743;
+    border-bottom:1px solid #ff6743;
+}
+.show_type_wrap .city_wrap{
+    width: 2rem;
+    border-left: .02667rem solid #e0e0e0;
+    font-size: .4rem;
+    color: #666;
+    height: .37333rem;
+    line-height: .37333rem;
+    margin-top: .13333rem;
+    text-align: center;
+}
+.library-wrap {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 2.61333rem;
+    bottom: 0;
+}
+.library-wrap ul{
+    margin: 0;
+    padding: 0;
+}
+.recommend-wrap{
+    padding-left: .4rem;
+    padding-right: .4rem;
+}
+.recommend-list li{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: .86667rem;
+    position: relative;
+    text-align: left;
+}
+.recommend-list li .show-icon a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.recommend-list li .show-icon{
+    width: 2.93333rem;
+    height: 4rem;
+    border-radius: .10667rem;
+    border: 1px solid #ebebeb;
+    position: relative;
+    overflow: hidden;
+}
+.recommend-list li .show-icon a img{
+    border: none;
+    border-color: transparent;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+}
+.recommend-list li .item-desc{
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin-left: .4rem;
+    color: #232323;
+    padding-top: .13333rem;
+}
+.recommend-list li .show-date{
+    font-size: .32rem;
+    height: .64rem;
+    line-height: .64rem;
+    letter-spacing: 1px;
+    color: #666;
+}
+.recommend-list li .show-date strong{
+    font-weight: bolder;
+    color: #232323;
+    font-size: .42667rem;
+}
+.recommend-list li .item-desc a{
+    display: block;
+}
+.recommend-list li .item-desc a h3{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-weight: bolder;
+    width: 100%;
+    font-size: .45333rem;
+    line-height: .6rem;
+    min-height: .6rem;
+    max-height: 1.2rem;
+    margin-top: .33333rem;
+}
+.recommend-list li .venue {
+    margin-top: .33333rem;
+    width: 5.33333rem;
+    font-size: .32rem;
+    height: .64rem;
+    line-height: .64rem;
+    color: #666;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+.recommend-list li .price strong{
+    color: #ff6743;
+    font-size: .42667rem;
+    letter-spacing: 0;
+    margin-right: .13333rem;
+    font-weight: 400;
+}
+.recommend-list li .price{
+    font-size: .29333rem;
+    color: #999;
+    height: .48rem;
+    line-height: .48rem;
+    margin-top: .26667rem;
+}
+.more a{
+    color: #999999;
+}

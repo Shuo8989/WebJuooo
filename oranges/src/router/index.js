@@ -26,6 +26,11 @@ import Login from '../views/Login/Login'
 import ResetPassword from '../views/Login/ResetPassword'
 import Verify from '../views/Login/Verify'
 import SetPassword from '../views/Login/SetPassword'
+<<<<<<< HEAD
+=======
+//演出
+import Vocalconcert from '../components/Show/Vocal_concert'
+>>>>>>> ed4da3fa1f1efd6a377096f92abd6494fc71aa7c
 //vip+会员
 import Vip from '../views/Vip/Vip.js'
 //橙PLUS卡
@@ -281,6 +286,7 @@ export default[
             isLogin:true,
         }  
     },
+<<<<<<< HEAD
     { //VIP界面
         to: '/vip/index/1',
         path: '/vip/index/1',
@@ -315,6 +321,17 @@ export default[
             title: '橙PLUS卡',
             isButton: false,
             isLogin: false,
+=======
+    {
+        path:'/show/showsLibrary',
+        context:'演唱会',
+        component:Vocalconcert,
+        exact:true,
+        meta:{
+            title:'演出',
+            isFooter:false,
+            isLogin:false
+>>>>>>> ed4da3fa1f1efd6a377096f92abd6494fc71aa7c
         }
     }
 ]

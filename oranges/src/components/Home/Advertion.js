@@ -6,8 +6,7 @@ import {
     NavLink,
     withRouter
 } from 'react-router-dom';
-<<<<<<< HEAD
-export default class Advertion extends Component{
+ class Advertion extends Component{
     componentDidMount(){
         new Swiper ('.home-banner-wrap', {
             direction: 'horizontal', 
@@ -21,9 +20,6 @@ export default class Advertion extends Component{
             },
         })  
     }
-=======
- class Advertion extends Component{
->>>>>>> ed4da3fa1f1efd6a377096f92abd6494fc71aa7c
     render(){
         const classifyHome=this.props.classifyHome;
         return(
@@ -32,19 +28,12 @@ export default class Advertion extends Component{
                     {
                         classifyHome.classifyHome.classify_list.map((v,i)=>(
                             <div key={i} className={"label-item__block"}>
-<<<<<<< HEAD
-                                <NavLink   className={"label-item__block__column"} to={''}>
-                                    <img src={v.pic} alt=""/>
-                                    <span>{v.name}</span>
-                                </NavLink>
-=======
 
                                     <NavLink   className={"label-item__block__column"} to={'/show/showsLibrary'}>
                                         <img src={v.pic} ait=""/>
                                         <span>{v.name}</span>
                                     </NavLink>
 
->>>>>>> ed4da3fa1f1efd6a377096f92abd6494fc71aa7c
                             </div>
                         ))
                     }

@@ -1,0 +1,355 @@
+.bg-warp{
+    background: #f0f0f0;
+}
+.brief-primary{
+    height:6.12rem;
+    position: relative;
+    overflow: hidden;
+}
+/*最顶上背景图*/
+.bg-pic{
+    height:100%; 
+    width: 100%;
+    filter:blur(0.98333rem);
+    position: absolute;
+    top:0;
+    left: 0;
+}
+.bg{
+    height:6.12rem;
+    background: rgba(0, 0, 0, 0.4)
+}
+/*顶部导航*/
+.show-detail-top{
+    position: absolute;
+    top: 0;
+    left:0;
+    height:1.18667rem;
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+    color: #fefefe;
+    font-size:.48rem;
+    font-weight:bold;
+    line-height:1.186rem;
+}
+.top-left,.top-right{
+    font-size:20px;
+}
+.top-right i{
+    margin-left:20%;
+}
+/*顶部导航下边大框*/
+.show-detail-top-info{
+    position: absolute;
+    top: 1.18667rem;
+    left: 0;
+    padding:0.4rem;
+    height:180.83px;
+    width: 100%;
+}
+/*演出图片*/
+.show-detail-top-info-pic{
+    position: absolute;
+    top: .4rem;
+    left: .4rem;
+    width:2.9333rem;
+    height:4rem;
+}
+.brief-primary-content-info{
+    position: absolute;
+    top:.4rem;
+    left:3.8rem;
+    height: 4rem;
+}
+.brief-primary-content-name{
+    font-size: .50667rem;
+    line-height: .6133rem;
+    font-weight: bolder;
+    color: #fefefe;
+    text-align: left;
+}
+.brief-primary-price{
+    font-size: .426rem;
+    font-weight: 700;
+    height: .426rem;
+    line-height: .426rem;
+    color: #fefefe;
+    position: absolute;
+    bottom: 5%;
+}
+/*演出详情下面部分*/
+.brief-secondary{
+    height:140px;
+    padding: 0 16.4px 23.5px 16.4px;
+    display: flex;
+    justify-content: space-around;
+    background: #fff
+}
+.brief-secondary-info{
+    height:115px;
+}
+.brief-secondary-date{
+    font-size:.48rem;
+    color: #232323;
+    font-weight: 700;
+    height:.48rem;
+    line-height:.48rem;
+    margin-top:.8rem;
+    text-align:left 
+}
+.brief-secondary-address{
+    font-size:.426rem;
+    color: #232323;
+    margin-top:.426rem;
+    margin-right:1.52rem;
+    line-height:.61333rem;
+    font-weight: bold
+}
+.brief-secondary-date-icon{
+    margin-left:.1467rem;
+    width:9px;
+    height: 9px;
+}
+/*右侧地址图标*/
+.brief-secondary-pointer{
+    margin-top:1.746rem;
+    width:1.1rem;
+    height: 1.1rem;
+    background: url(../../assets/Theatre/img/icon-address.png) no-repeat 50%;
+    background-color:#ededed; 
+    border-radius: 50%;
+    background-size:.48rem .58rem; 
+}
+/* plus会员卡提示框 */
+.detail-plus-tips{
+    height: 50px;
+    margin: .1rem .53rem;
+    background-image:linear-gradient(-4deg,#1e1e1e,#464542);
+    border-radius: .1333rem;
+    display: flex;
+    justify-content: space-around;
+}
+.detail-plus-card{
+    display:inline-block;
+    width:1.6rem;
+    height:.5rem;
+    text-align: center;
+    line-height: .5rem;
+    background-image:linear-gradient(0deg,#f5dea9,#f8d583);
+    font-size:.3rem; 
+    margin-top: 4%;
+}
+.detail-plus-content{
+    font-size: .373rem;
+    color: #f5dea9;
+    line-height: .426rem;
+    margin-top: 4%;
+}
+.detail-plus-open-card{
+    font-size:.293rem;
+    line-height: .426rem;
+    font-weight: 500;
+    color: #f5dea9;
+    margin: 4% 1% 0 0;
+}
+.detail-plus-open-card i{
+    color: #f5dea9;
+    font-size:.393rem;
+    margin-left: 5px;
+}
+/*详情安排*/
+.brief-schedule{
+    height: 260px;
+    background: #fefefe;
+    margin-top:3.5%;
+}
+.benefit-item,.benefit-item-admission,.benefit-item-support{
+    height: 60px;
+    margin:16.4px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size:.373rem;
+    color:#999;
+    line-height: 60px; 
+    text-align: left;
+}
+.benefit-item i{
+    background: url(../../assets/Theatre/img/icon-bg-card.png) no-repeat;
+    background-size: 2.4rem 100%;
+    margin-left:.4rem;
+    width:2.4rem;
+    background-position: 50%;
+    font-size: .32rem;
+    line-height: .32rem;
+    color: #fff;
+    text-align: center;
+    padding:.186rem 0 .133rem;
+    display: inline-block;
+}
+.more img{
+    margin-left:60px; 
+    width:20px;
+}
+/*vip*/
+.benefit-item-plus {
+    height: 45px;
+    margin:16.4px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size:.373rem;
+    color:#999;
+    text-align: left;
+    line-height: 30px; 
+}
+.member{
+    font-size: .346rem;
+    color: #222;
+    padding-left:.4rem;
+    line-height: .373rem; 
+}
+.integral{
+    color: #ff6743;
+    padding-left:.16rem; 
+    font-size: .346rem;
+}
+.benefit-item-plus img {
+    width:9.8px;
+    height:9.8px;
+    margin-left:80px 
+} 
+/*入场*/
+.benefit-item-admission{
+    line-height: 30px;
+    height: 50px; 
+}
+.benefit-item-admission-content{
+    font-size:.346rem;
+    color:#232323;
+    padding-top: .026rem; 
+    float: right;
+}
+/*支持*/
+.benefit-item-support{
+    line-height: 30px;
+}
+.seat{
+    font-size: 0.346rem;
+    color:#999;
+    line-height: .64rem;
+    margin:0 .4rem
+
+}
+/*巡演城市*/
+.tour-cities,.remind,.recommend{
+    height: 4.026rem;
+    background: #fefefe;
+    overflow: hidden;
+    margin-top:3.5%;
+}
+.tour-cities-top{
+    height:1.586rem;
+    display: flex;
+    justify-content: space-between;
+    margin:.12rem .4rem 0;
+}
+.tour-cities-top-name{
+    font-size: .53rem;
+    font-weight: 700;
+    color:#232323;
+    line-height: 1.8rem;
+}
+.tour-cities-top-number{
+    font-size:.353rem;
+    line-height: 1.8rem;
+}
+.tour-cities-top-number i{
+    color:#ff6743;
+}
+.tour-cities-list{
+    width:2.4rem;
+    height:1.653rem;
+    border:.026rem solid #ebebeb;
+    margin-left: .32rem;
+    border-radius: 14%;
+}
+.tour-cities-list-name{
+    font-size:.453rem;
+    height: .453rem;
+    font-weight: 700;
+    line-height: .453rem;
+    color:#232323;
+    margin-top:.39rem;
+}
+.tour-cities-list-date{
+    font-size:.373rem;
+    height:.373rem;
+    line-height:.373rem;
+    color:#666;
+    margin-top:.2rem;
+}
+/*温馨提醒*/
+.remind{
+    height: auto;
+}
+.remind-list{
+    margin-top:.3rem;
+}
+.remind-info i{
+    display:inline-block;
+    width:.106rem;
+    height:.106rem;
+    background:#999;
+    border-radius: 50%;
+}
+.remind-info span{
+    color: #999;
+    font-size:.346rem;
+    margin-left:.346rem;
+    line-height:.346rem;
+}
+/*相关推荐*/
+.recommend{
+    height: auto;
+}
+.recommend-show-item{
+    height:4.88rem;
+    padding: 0.19rem 0;
+    display: flex;
+
+}
+.recommend-show-item img{
+    height:4rem;
+    width: 2.93rem;
+    margin-top:.44rem;
+    margin-left:0.5rem;
+}
+.recommend-show-right{
+    text-align: left;
+    margin-left:18px
+}
+.recommend-date{ 
+    font-size:.426rem;
+    margin-top:20px;
+    line-height:.426rem;
+    font-weight: bold;
+    color: #232323;
+}
+.recommend-name{
+    font-size:.453rem;
+    color: #232323;
+    margin-top:.5rem;
+    font-weight: bold;
+}
+.recommend-price{
+    color: #ff7919;
+    font-size:0.3413rem;
+    margin-top:0.466rem
+}
+.recommend-address{
+    font-size:.32rem;
+    color:#666;
+    line-height: .32rem;
+    margin-top:0.4rem;
+}
+.recommend-num{
+    margin-left: 1%;
+}

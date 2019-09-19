@@ -1,0 +1,597 @@
+.vip-plus-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    .vip-plus__title {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        height: 1.17333rem;
+        padding: 0 0.27rem;
+        width: 100%;
+        background: #ffffff;
+        font-size: 0.48rem;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        border-bottom: 1px solid #ebebeb;
+
+        .title__text {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            i {
+                display: block;
+            }
+        }
+    }
+
+    //section
+    .vip-plus__desc-wrapper {
+        position: absolute;
+        overflow-y: auto;
+        width: 100%;
+        top: 1.19333rem;
+        background-color: #f5f5f5;
+
+        .vip-plus__desc {
+            width: 100%;
+            background-image: url(../img/vip_plus_desc_bg.de74236.png);
+            background-repeat: no-repeat;
+            background-color: #fcfcfc;
+            background-size: 100%;
+            padding-bottom: .66667rem;
+            overflow: hidden;
+
+            .vip-plus__desc__title {
+                color: #f4dcc4;
+                background-image: url(../img/vip_plus_desc_title.d71030d.png);
+                background-repeat: no-repeat;
+                background-size: 8.85333rem 1.46667rem;
+                background-position: bottom;
+                width: 100%;
+                height: 1.46667rem;
+                margin-top: .42667rem;
+            }
+
+            .vip-plus__desc__content {
+                // background-image: url(../img/vip_plus_right.61e731b.png);
+                background-size: 5.89333rem 4.42667rem;
+                background-repeat: no-repeat;
+                display: flex;
+                flex-direction: column;
+                width: 331.2px;
+                height: 400px;
+                background-color: #fffcf5;
+                margin: 0.1rem auto 0;
+                box-shadow: 0 0.10667rem 0.33333rem 0.06667rem hsla(39, 42%, 75%, .3);
+                border-radius: .13333rem;
+                padding: 0 .4rem;
+
+                .right-grid {
+                    .right-grid__row {
+                        display: flex;
+                        justify-content: space-between;
+                        padding-top: .66667rem;
+
+                        .right-grid__cell {
+                            width: 1.5737rem;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+
+                            .right-cell__icon {
+                                width: 1.25333rem;
+                                height: 1.25333rem;
+                                display: block;
+                                background-size: 5.89333rem 4.42667rem;
+                                border: 1px solid red;
+                                // background-image: url(/static/img/vip_plus_right.61e731b.png);
+                            }
+
+                            .right-cell__icon--prior-buy {
+                                // background-position: -.12rem -3.06667rem;
+                            }
+
+
+                            .right-cell__name {
+                                font-size: 13.5px;
+                                color: #514843;
+                                margin-top: .24rem;
+                            }
+                        }
+                    }
+
+                }
+
+                .ju-button {
+                    margin-top: .61333rem;
+                    font-size: .45333rem;
+                    height: 1.2rem;
+                    background: linear-gradient(90deg, #fece9d, #d79a62);
+                    border: none;
+                    color: #85470e;
+                    white-space: nowrap;
+                    cursor: pointer;
+                    text-align: center;
+                    outline: 0;
+                    font-weight: 400;
+                    border-radius: 26.66667rem;
+                }
+
+                .vip-plus__desc__content__rule {
+                    font-size: 12px;
+                    text-decoration: underline;
+                    text-align: center;
+                    color: #999;
+                    padding: .4rem 0;
+                }
+
+            }
+        }
+
+        //冲会员广告
+        .vip-plus__desc_ad {
+            padding-bottom: 0.666667rem;
+            background-color: #fff;
+        }
+
+        .ad-swipe__swipe__item__img {
+            display: block;
+            width: 9.2rem;
+            height: 100%;
+            background-color: #efefef;
+            border-radius: .10667rem;
+            margin: 0 auto;
+        }
+
+        //专享券
+        .vip-plus__coupon {
+            background-color: #fff;
+            width: 100%;
+            overflow: hidden;
+            text-align: left;
+            margin-top: 0.32rem;
+            padding: .66667rem 0;
+
+            .entry-block__title {
+                padding-left: .4rem;
+                margin-bottom: .53333rem;
+                height: .72rem;
+                line-height: .72rem;
+                color: #232323;
+                font-size: .53333rem;
+                font-weight: 700;
+            }
+
+            //优惠券swiper
+            .coupon-swiper-wrapper {
+                position: relative;
+                height: 2.8rem;
+                text-align: left;
+
+                .vip-plus-coupon-swipe {
+                    .swiper-slide {
+                        //轮播元素
+                        display: flex;
+                        margin-left: .4rem;
+                        background-image: url(../img/vip_piaojia.png);
+                        background-repeat: no-repeat;
+                        background-size: 100%;
+                        background-position: 50%;
+                        width: 307px !important;
+                        height: 100px;
+
+                        .slide-left {
+                            width: 5.87rem;
+                            height: 100%;
+
+                            p {
+                                font-size: 0.4rem;
+                            }
+                        }
+
+                        .slide-right {
+                            width: 2.678rem;
+                            height: 100%;
+
+
+                            .coupon__get {
+                                border-radius: .29333rem;
+                                text-align: center;
+                                font-size: .32rem;
+                                border: 1px solid #d4a36f;
+                                width: 1.86667rem;
+                                height: .58667rem;
+                                line-height: .58667rem;
+                                color: #d4a36f;
+                                margin: 0 auto;
+                                margin-top: 1.111rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //优先购票
+        .vip-plus__prior-buy {
+            background-color: #ffffff;
+            margin-top: 0.32rem;
+            text-align: left;
+
+            //标题
+            .entry-block__title {
+                padding-left: .4rem;
+                // margin-bottom: .53333rem;
+                height: 0.694444rem;
+                line-height: 1.8rem;
+                color: #232323;
+                font-size: .53333rem;
+                font-weight: 700;
+            }
+
+            //内容区域
+            .vip-buy__content {
+                overflow: hidden;
+
+                //购票列表元素
+                .prior-buy-card {
+                    width: 9.19444rem;
+                    height: 5.05556rem;
+                    margin: .53333rem auto;
+                    overflow: hidden;
+                    position: relative;
+
+                    .show-img {
+                        float: left;
+                        width: 2.93305rem;
+                        height: 4rem;
+                        margin-top: 0.527778rem;
+
+                        img {
+                            height: 100%;
+                        }
+                    }
+
+                    .show-item {
+                        float: right;
+                        width: 5.8805rem;
+                        height: 4rem;
+                        margin-top: 0.527778rem;
+
+
+                        //日期
+                        .data-week {
+                            margin-top: .21333rem;
+                            display: flex;
+                            align-items: center;
+                            color: #232323;
+
+                            .data-week__date {
+                                display: inline-block;
+                                font-weight: 700;
+                                height: .42667rem;
+                                line-height: .42667rem;
+                                font-size: .42667rem;
+                            }
+
+                            .data-week__week {
+                                display: inline-block;
+                                font-size: .32rem;
+                                height: .32rem;
+                                line-height: .32rem;
+                                margin-left: .12rem;
+                                vertical-align: bottom;
+                            }
+
+                        }
+
+                        //票详情
+                        .item-info-name {
+                            display: flex;
+                            align-items: center;
+                            flex-wrap: wrap;
+                            height: 2.02667rem;
+
+                            .item-info-name-content {
+                                font-size: .45333rem;
+                                font-weight: 700;
+                                color: #232323;
+                                line-height: .61333rem;
+                                height: 1.22667rem;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+                        }
+
+                        //票地址
+                        .item-info-place {
+                            font-size: .32rem;
+                            color: #666;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            width: 5.86667rem;
+                            height: .32rem;
+                            line-height: .32rem;
+                        }
+
+                        //票价等信息
+                        .item-info-extra {
+                            position: absolute;
+                            left: 0;
+                            bottom: 0rem;
+                            font-size: 12px;
+                            box-sizing: content-box;
+                            left: 117px;
+                            bottom: 15px;
+
+                            //票价
+                            .extra-price {
+                                color: #ff6743;
+                                font-size: .42667rem;
+                            }
+
+                            //票价描述
+                            .extra-price-desc {
+                                color: #999;
+                                font-size: .32rem;
+                                margin-left: .13333rem;
+                            }
+
+                            //日期
+                            .extra-date {
+                                color: #ff6743;
+                                font-size: .34667rem;
+                                text-align: right;
+                                margin-left: 1.25rem;
+                            }
+
+                            //日期状态
+                            .extra-date-desc {
+                                color: #666;
+                                font-size: .32rem;
+                                text-align: right;
+                                margin-left: .13333rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //专享折扣
+        .vip-discount {
+            width: 100%;
+            background-color: #fff;
+            margin-top: 0.32rem;
+            overflow: hidden;
+            padding: .66667rem .4rem;
+            text-align: left;
+
+            .vip-discount-title {
+                margin-bottom: .53333rem;
+                height: .72rem;
+                line-height: .72rem;
+                color: #232323;
+                font-size: .53333rem;
+                display: flex;
+                justify-content: space-between;
+                font-weight: 700;
+
+                .vip-block {
+                    font-size: .37333rem;
+                    color: #666;
+                    font-weight: 400;
+                    -webkit-box-flex: 1;
+                    flex: 1;
+                    margin-left: .26667rem;
+                }
+            }
+
+            .vip-discount-grid {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                //列表元素
+                .show-cell {
+                    width: 2.85333rem;
+                    height: 6.13333rem;
+
+                    .show-cell-img {
+                        width: 2.85333rem;
+                        height: 3.89333rem;
+                    }
+
+                    .show-cell-name {
+                        width: 2.85333rem;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        font-size: .45333rem;
+                        text-overflow: ellipsis;
+                        font-weight: 700;
+                        color: #232323;
+                        margin-top: 0.3333rem;
+
+                    }
+
+                    .show-cell-discount {
+                        width: 2.85333rem;
+                        font-size: .48rem;
+                        color: #ff6743;
+                        margin-top: 0.277778rem;
+
+                    }
+                }
+            }
+
+            .vip-findmore {
+                margin: 0 auto;
+                border: 1px solid #d79a62;
+                color: #d79a62;
+                width: 4.24rem;
+                font-size: .4rem;
+                height: 1.05555rem;
+                vertical-align: bottom;
+                display: flex;
+                justify-content: center;
+                line-height: .96rem;
+                border-radius: 0.2rem;
+                background: #fff;
+                text-align: center;
+            }
+        }
+
+        //免费观影
+        .free-view {
+            width: 10rem;
+            overflow: hidden;
+            text-align: left;
+            padding: .66667rem .4rem;
+            background-color: #fff;
+            margin-top: 0.32rem;
+
+            //免费观影标题
+            .free-title {
+                height: .72rem;
+                line-height: .72rem;
+                color: #232323;
+                font-size: .53333rem;
+                display: flex;
+                justify-content: space-between;
+                font-weight: 700;
+                margin-bottom: .53333rem;
+
+                .title-use {
+                    font-weight: 400;
+                    font-size: .3333rem;
+                    color: #666;
+                }
+            }
+
+            //免费ITEM
+            .free-item {
+                width: 2.85333rem;
+                height: 5.3333rem;
+
+                .free-img {
+                    width: 2.85333rem;
+                    height: 3.89333rem;
+                }
+
+                .free-item-name {
+                    width: 2.85333rem;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    font-size: .45333rem;
+                    text-overflow: ellipsis;
+                    font-weight: 700;
+                    color: #232323;
+                    margin-top: 0.3333rem;
+
+                }
+
+                .free-price {
+                    color: #ff6743;
+                    font-size: .42667rem;
+                    vertical-align: bottom;
+                    margin-top: 0.277778rem;
+
+                    .free-delete {
+                        font-size: .32rem;
+                        color: #999;
+                        text-decoration: line-through;
+                        margin-left: .13333rem;
+                    }
+                }
+            }
+        }
+
+        .vip-double {
+            width: 10rem;
+            height: 6.97222rem;
+            overflow: hidden;
+            text-align: left;
+            padding: .66667rem .4rem;
+            background-color: #fff;
+            margin-top: 0.32rem;
+
+            .vip-double-title {
+                height: .72rem;
+                line-height: .72rem;
+                color: #232323;
+                font-size: .53333rem;
+                display: flex;
+                justify-content: space-between;
+                font-weight: 700;
+                margin-bottom: .53333rem;
+            }
+
+            img {
+                width: 100%
+            }
+        }
+
+        .vip-freepost {
+            width: 10rem;
+            height: 6.97222rem;
+            overflow: hidden;
+            text-align: left;
+            padding: .66667rem .4rem;
+            background-color: #fff;
+            margin-top: 0.32rem;
+
+            .vip-freepost-title {
+                height: .72rem;
+                line-height: .72rem;
+                color: #232323;
+                font-size: .53333rem;
+                display: flex;
+                justify-content: space-between;
+                font-weight: 700;
+                margin-bottom: .53333rem;
+
+            }
+
+            img {
+                width: 100%
+            }
+        }
+
+        .vip-more {
+            color: #999;
+            font-size: .32rem;
+            padding: .58667rem 0 1.89333rem;
+            text-align: center;
+        }
+
+    }
+
+    .vip-btn {
+        font-size: .45333rem;
+        width: 100%;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 1.30667rem;
+        background: linear-gradient(90deg, #fece9d, #d79a62);
+        color: #85470e;
+        border: none;
+
+        .vip-btn-price {
+
+            font-weight: 700;
+        }
+
+        .vip-btn-unit {
+            font-size: .29333rem;
+        }
+    }
+}

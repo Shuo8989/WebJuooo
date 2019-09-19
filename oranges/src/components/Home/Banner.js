@@ -8,7 +8,7 @@ export default class Banner extends Component{
             <div className="swiper-container banner-swiper">
                 <div className="swiper-wrapper banner-swiper-wrapper">
                     {
-                        this.props.slide_list.map((v,i)=>{
+                        this.props.banner_list.map((v,i)=>{
                             return (
                                <div className="swiper-slide banner-swiper-slide" key={i} >
                                    <Link to={v.url}>
@@ -24,7 +24,7 @@ export default class Banner extends Component{
         )
     }
     componentDidMount(){
-        let mySwiper = new Swiper ('.banner-swiper', {
+        new Swiper ('.banner-swiper', {
             direction: 'horizontal', // 垂直切换选项
             loop: true, // 循环模式选项
             speed:300,//自动播放

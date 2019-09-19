@@ -1,0 +1,100 @@
+/*最顶上*/
+.navbar{
+    height:47.219px;
+    display: flex;
+    justify-content:space-between;
+}
+.icon-menu-left,.icon-option-horizontal{
+    margin:0 20px; 
+    font-size: 0.7rem;
+    
+}
+.icon-option-horizontal{
+    margin-top:11%;
+}
+.center{
+    font-size: 0.45rem;
+    color: #212121;
+    height: 0.98rem;
+    text-align: center;
+    line-height: 1.1rem;
+}
+/*插屏图片*/
+.link-pic{
+   height: 4.2rem; 
+   width:100%;
+}
+/*4个图标位置*/
+.category{
+    margin:0.22667rem 0.26333rem 0;
+    padding: 0.286rem 0;
+    display: flex;
+    justify-content:space-around;
+    border-radius: 0.11rem;
+    box-shadow: 0.0533rem 0.0533rem 0.01rem rgba(178, 178, 178, 0.1);
+}
+.category img{
+    width: 46.03px;
+    height:46.03px;
+}
+/*热门演出*/
+.title{
+    font-size:0.5rem;
+    font-weight: bold;
+    color:#333;
+    background: #fff;
+    text-align: left;
+    padding: 0.3rem 0.3rem 0.1rem;
+}
+/*列表*/
+.show-item{
+    height:153.44px;
+    padding: 0.19rem 0;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #e6e6e6;
+}
+.show-item img{
+    height:129.516px;
+    width: 96.625px;
+    margin-left: 20px
+}
+.show-right{
+    text-align: left;
+    margin-left: 20px
+}
+.name{
+    margin-bottom:0.3rem;
+    padding-top:0.064rem; 
+    font-size:0.41rem;
+    height:46.63px;
+    overflow: hidden;
+    margin-right:5%;
+}
+.date,.address {
+    font-size:0.3rem;
+    color: #999;
+    line-height: 0.5rem;
+}
+.price{
+    color: #ff7919;
+    font-size:0.3413rem;
+    margin-top:0.266rem
+}
+.num{
+    margin-left: 1%;
+}
+/*加载更多*/
+.load-more{
+    height:32.88px;
+    margin:0.64rem 35% ;
+    border:1px solid #e6e6e6;
+    text-align: center;
+    line-height: 0.75rem;
+    font-size: 0.33rem;
+    color:inherit; 
+}
+.load-more i{
+    margin-left:4%;
+    color: #b2b2b2;
+}

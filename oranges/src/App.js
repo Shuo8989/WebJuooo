@@ -9,7 +9,7 @@ import GuardRouter from './router/GuardRouter';
 class App extends React.Component{
   render(){
     return(
-      <div className ="App">
+      <div className="App">
         <Router>
           {
             router.map((v,i)=>(
@@ -21,4 +21,5 @@ class App extends React.Component{
     )
   }
 }
+
 export default App;

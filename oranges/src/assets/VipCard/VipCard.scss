@@ -1,0 +1,263 @@
+.plus-wrapper {
+    height: 100%;
+    width: 100%;
+    background: #f5f5f5;
+
+    //头部
+    .plus-title {
+        height: 1.17333rem;
+        position: absolute;
+        top: 0;
+        padding: 0 0.27rem;
+        width: 100%;
+        background: #ffffff;
+        font-size: 0.48rem;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #ebebeb;
+
+        .title__text {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            i {
+                display: block;
+            }
+        }
+    }
+
+    //中间部分Section
+    .ad-wrapper {
+        position: absolute;
+        width: 100%;
+        top: 1.17333rem;
+        bottom: 1.3333rem;
+        overflow-y: auto;
+        background-color: #f5f5f5;
+
+        .ad {
+            width: 100%;
+            height: 224.64px;
+
+            background-image: url(../img/cardimg.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: center;
+            padding: 0.57333rem 0 1.04rem;
+
+            .adimg {
+                display: block;
+                width: 9.2rem;
+                height: 100%;
+                background-color: #efefef;
+                border-radius: .10667rem;
+                margin: 0 auto;
+            }
+
+        }
+
+        .init-block {
+            width: 360px;
+            height: 165.25px;
+            width: 100%;
+            background-color: #fff;
+            padding: .66667rem .4rem;
+
+            .init-title {
+                padding-bottom: .53333rem;
+                height: .72rem;
+                line-height: .72rem;
+                color: #232323;
+                font-size: .53333rem;
+                display: flex;
+                justify-content: space-between;
+                font-weight: 700;
+            }
+
+            .init-title-desc {
+                font-size: .37333rem;
+                color: #666;
+                font-weight: 400;
+                text-align: left;
+                flex: 1;
+                margin-left: .26667rem;
+            }
+
+            .more {
+                font-weight: 400;
+                font-size: .53333rem;
+                transform: scale(.5);
+                transform-origin: 100% 50%;
+                color: #666;
+            }
+
+            .init-desc {
+                height: 72px;
+                margin-right: -30px;
+                display: flex;
+                width: 100%;
+                overflow-x: scroll;
+                margin-top: 0.486667rem;
+
+                .right-cell {
+                    margin-right: 0.56rem;
+                    display: flex;
+                    align-items: center;
+                    width: 1.6rem;
+                    height: 72.15px;
+                    flex-direction: column;
+                    flex-shrink: 0;
+
+                    // .right-cell-icon::-webkit-scrollbar { width: 0 !important }
+                    .right-cell-icon {
+                        width: 1.25333rem;
+                        height: 1.25333rem;
+                        display: block;
+                        border: 1px solid red;
+                        border-radius: 50%;
+
+                        // background-size: 5.89333rem 4.42667rem;
+                        // background-image: url(/static/img/vip_plus_right.61e731b.png);
+                    }
+
+                    .right-cell-name {
+                        color: #514843;
+                        margin-top: .24rem;
+                        font-size: .37333rem;
+                    }
+                }
+            }
+
+        }
+
+        .card {
+            margin-top: .32rem;
+            background-color: #fff;
+            padding: .66667rem .4rem;
+            overflow: hidden;
+
+            .card-title {
+                // margin-bottom: .53333rem;
+                height: .72rem;
+                line-height: .72rem;
+                color: #232323;
+                font-size: .53333rem;
+                display: flex;
+                font-weight: 700;
+
+                .save-desc {
+                    font-size: .37333rem;
+                    color: #666;
+                    font-weight: 400;
+                    margin-left: .26667rem;
+
+                }
+            }
+
+            .card-list {
+                padding: .66667rem 0;
+                border-bottom: 1px solid #f5f5f5;
+
+                .orange-plus {
+                    display: flex;
+
+                    img {
+                        width: 4.26667rem;
+                        height: 2.66667rem;
+                        border-radius: .10667rem;
+                        overflow: hidden;
+                    }
+
+                    .card-cell-desc {
+                        flex-direction: column;
+                        display: flex;
+                        justify-content: space-between;
+                        padding: .2rem 0;
+                        margin-left: .4rem;
+                        text-align: left;
+
+                        .card-cell-desc-top {
+                            color: #232323;
+                            font-size: .45333rem;
+                            font-weight: 700;
+                        }
+
+                        .card-cell-desc-middle {
+                            color: #999;
+                            font-size: .32rem;
+                            height: .64rem;
+                            line-height: .64rem;
+
+                        }
+
+                        .card-cell-desc-bottom {
+                            height: .64rem;
+                            line-height: .64rem;
+
+                            .card-price {
+                                color: #ff6743;
+                                font-size: .42667rem;
+                                font-weight: 700;
+                            }
+
+                            .card-give {
+                                display: inline-block;
+                                // width: 1.25333rem;
+                                height: .45333rem;
+                                background: rgba(255, 129, 0, .1);
+                                border-radius: .08rem;
+                                text-align: center;
+                                line-height: .45333rem;
+                                font-size: .32rem;
+                                color: #d5a370;
+                                padding: 1px 0 5px 5px;
+                                box-sizing: border-box;
+                                margin-left: .42667rem;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+    }
+
+
+
+    //底部三个按钮
+    .tab {
+        height: 1.33333rem;
+        background-color: #fefefe;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        border-top:1px solid #ebebeb; 
+
+        .tab-item {
+            height: 1.30667rem;
+            line-height: 1.30667rem;
+            text-align: center;
+            font-size: .4rem;
+            color: #1a1a1a;
+            flex: 1;
+        }
+        .tab-item-active{
+            color: #ff6743;
+        }
+        .tab-divider {
+            height: .4rem;
+            background: #ccc;
+            margin: auto 0;
+            width: 1px;
+        }
+
+    }
+
+
+
+
+}

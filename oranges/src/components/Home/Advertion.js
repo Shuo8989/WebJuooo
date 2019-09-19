@@ -1,12 +1,26 @@
 import React,{Component} from 'react';
 import '../../assets/Home/Advertion-wrap.scss';
+import Swiper from 'swiper'
+import 'swiper/dist/css/swiper.min.css'
 import {
     NavLink
 } from 'react-router-dom';
 export default class Advertion extends Component{
+    componentDidMount(){
+        new Swiper ('.home-banner-wrap', {
+            direction: 'horizontal', 
+            loop: true, 
+            speed:300,
+            autoplay : {
+                delay:3000
+                },
+            pagination: {
+                el: '.banner-swiper-pagination',
+            },
+        })  
+    }
     render(){
         const classifyHome=this.props.classifyHome;
-        console.log(classifyHome)
         return(
             <div className={'advertion-wrap'}>
                 <div className={"lable-item"}>
@@ -14,7 +28,7 @@ export default class Advertion extends Component{
                         classifyHome.classifyHome.classify_list.map((v,i)=>(
                             <div key={i} className={"label-item__block"}>
                                 <NavLink   className={"label-item__block__column"} to={''}>
-                                    <img src={v.pic} ait=""/>
+                                    <img src={v.pic} alt=""/>
                                     <span>{v.name}</span>
                                 </NavLink>
                             </div>
@@ -22,7 +36,7 @@ export default class Advertion extends Component{
                     }
                 </div>
                 {
-                    classifyHome.vipHomeSchedular.priorList.length>0?(
+                    classifyHome.vipHomeSchedular.priorList?(
                         <div className={'vip-ahead'}>
                             <NavLink to={'/vip/index'}>
                                 <div className={'vip-ahead__advert__left'}>
@@ -34,33 +48,87 @@ export default class Advertion extends Component{
                                     <span>&gt;</span>
                                 </div>
                             </NavLink>
-                            <div  className={'swiper-container home-banner-wrap'}>
-                                <div className={"swiper-wrapper"}>
-                                    <div className={"swiper-slide"}>
-                                        <div className={"vip-ahead__list"}>
-                                            <div className={'vip-ahead__list__item'}>
-                                                <NavLink to={''} className={'vip-ahead__list__item__wrap'}>     
-                                                    <img src={classifyHome.vipHomeSchedular.priorList[0].pic} alt='' />
+                            <div className="swiper-container home-banner-wrap swiper-container-horizontal swiper-container-android">
+                                <div className="swiper-wrapper">
+                                    {
+                                        classifyHome.vipHomeSchedular.priorList.map((v,i)=>{
+                                            return (
+                                            <div className="swiper-slide banner-swiper-slide" key={i} >
+                                                <NavLink to={''} className={'vip-ahead__list'}>
+                                                    <img  src={v.pic} alt=""/>
                                                 </NavLink>
-                                            </div>
-                                            <div className={'div-2'}>
-                                                <h3>{classifyHome.vipHomeSchedular.priorList[0].schedular_name}</h3>
-                                                <p className={'p-1'}>{classifyHome.vipHomeSchedular.priorList[0].city_name +' | '+ classifyHome.vipHomeSchedular.priorList[0].venue_name}}</p>
-                                                <p className={'p-2'}>
-                                                    <span className={'p-span-1'}>{classifyHome.vipHomeSchedular.priorList[0].end_time}</span>
-                                                    <span className={'p-span-2'}>开始</span>
-                                                </p>
-                                            </div>
-                                            <NavLink to={''}>
                                                 <span className={'vip-ahead__list__lab'}>开售提醒</span>
-                                            </NavLink>
-                                        </div>
-                                    </div>
+                                            </div> 
+                                            )
+                                        })
+                                    }
                                 </div>
+                                <div className="swiper-pagination banner-swiper-pagination"></div>
                             </div>
-                        </div>
+                        </div> 
                     ):null
                 }
+                <div className={"operation"}>
+                    <ul className={"operation__ul operation--top"}>
+                        <li className={'operation__item'}>
+                            <NavLink to={''} className={'operation__item__block1'}>
+                                <div>
+                                    <h3 className={'operation__item__block__title'}>{classifyHome.classifyHome.operation_list[0].name}</h3>
+                                    <p dangerouslySetInnerHTML={{__html:classifyHome.classifyHome.operation_list[0].describe }}></p>
+                                </div>
+                                <div className={'operation__item__block__icon'}>
+                                    <img src={classifyHome.classifyHome.operation_list[0].pic} alt=""/>
+                                </div>
+                            </NavLink>
+                        </li>
+                        <li className={'operation__item'}>
+                            <NavLink to={''} className={'operation__item__block1'}>
+                                <div>
+                                    <h3 className={'operation__item__block__title'}>{classifyHome.classifyHome.operation_list[1].name}</h3>
+                                    <p dangerouslySetInnerHTML={{__html:classifyHome.classifyHome.operation_list[1].describe }}></p>
+                                </div>
+                                <div className={'operation__item__block__icon'}>
+                                    <img src={classifyHome.classifyHome.operation_list[1].pic} alt=""/>
+                                </div>
+                            </NavLink>
+                        </li>
+                    </ul>
+                    <ul className={"operation__ul operation--bottom"}>
+                        <li className={'operation__item'}>
+                            <NavLink to={''} className={'operation__item__block2'}>
+                                <div>
+                                    <h3 className={'operation__item__block__title'}>{classifyHome.classifyHome.operation_list[2].name}</h3>
+                                    <p dangerouslySetInnerHTML={{__html:classifyHome.classifyHome.operation_list[2].describe }}></p>
+                                </div>
+                                <div className={"operation__item__block__preferential"}>
+                                    <img src={classifyHome.classifyHome.operation_list[2].pic} alt=""/>
+                                </div>
+                            </NavLink>
+                        </li>
+                        <li className={'operation__item'}>
+                            <NavLink to={''} className={'operation__item__block2'}>
+                                <div>
+                                    <h3 className={'operation__item__block__title'}>{classifyHome.classifyHome.operation_list[3].name}</h3>
+                                    <p dangerouslySetInnerHTML={{__html:classifyHome.classifyHome.operation_list[3].describe }}></p>
+                                </div>
+                                <div className={"operation__item__block__preferential"}>
+                                    <img src={classifyHome.classifyHome.operation_list[3].pic} alt=""/>
+                                </div>
+                            </NavLink>
+                        </li>
+                        <li className={'operation__item'}>
+                            <NavLink to={''} className={'operation__item__block2'}>
+                                <div>
+                                    <h3 className={'operation__item__block__title'}>{classifyHome.classifyHome.operation_list[4].name}</h3>
+                                    <p dangerouslySetInnerHTML={{__html:classifyHome.classifyHome.operation_list[4].describe }}></p>
+                                </div>
+                                <div className={"operation__item__block__preferential"}>
+                                    <img src={classifyHome.classifyHome.operation_list[4].pic} alt=""/>
+                                </div>
+                            </NavLink>
+                        </li>
+                    </ul>
+                </div>
             </div>
         )
     }

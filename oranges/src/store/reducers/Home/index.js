@@ -9,6 +9,12 @@ export default (state=inisState,{type,payload})=>{
         case homeType.UP_VIP_SCHEDULAR:
             state.vipHomeSchedular = payload;
             break; 
+        case homeType.UP_HOT_SRECOMMEND:
+            state.HotsShowlist= payload;
+            break; 
+        case homeType.UP_TOUR_RECOMMEND:
+            state.Tourshowlist= payload;
+            break;    
         default:
             break;
     }

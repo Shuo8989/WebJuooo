@@ -2,6 +2,10 @@
 import Home from '../views/home/Home'
 //剧院
 import Theatre from '../views/theatre/Theatre'
+//剧院列表信息
+import TheatreList from '../components/Theatre/TheatreList';
+//表演详情
+import ShowDetail from '../components/Theatre/ShowDetail';
 //票夹
 import Eticket from '../views/eticket/Eticket'
 //我的
@@ -22,8 +26,12 @@ import Login from '../views/Login/Login'
 import ResetPassword from '../views/Login/ResetPassword'
 import Verify from '../views/Login/Verify'
 import SetPassword from '../views/Login/SetPassword'
-
 //vip+会员
+import Vip from '../views/Vip/Vip.js'
+//橙PLUS卡
+import VipPlus from '../views/VipPlus/VipPlus.js'
+//购买新卡
+import VipCard from '../views/VipCard/VipCard.js'
 export default[
     {//首页
         to:'/',
@@ -45,6 +53,28 @@ export default[
         meta:{
             title:'聚橙网',
             isButton:true,
+            isLogin:false
+        }
+    },
+    {//剧院列表
+        to:'/theatre/index',
+        path:'/theatre/index',
+        context:'剧院列表信息',
+        component:TheatreList,
+        meta:{
+            title:'聚橙网',
+            isButton:false,
+            isLogin:false
+        }
+    },
+    {//表演详情
+        to:'/ticket',
+        path:'/ticket', 
+        context:'演出详情',
+        component:ShowDetail,
+        meta:{
+            title:'聚橙网',
+            isButton:false,
             isLogin:false
         }
     },
@@ -213,7 +243,7 @@ export default[
         exact:true,
         meta:{
             title:'登录',
-            isFooter:false,
+            isButton:false,
             isLogin:false
         }
     },
@@ -225,7 +255,7 @@ export default[
         exact:true,
         meta:{
             title:'登录',
-            isFooter:false,
+            isButton:false,
             isLogin:true
         }
     },
@@ -236,7 +266,7 @@ export default[
         exact:true,
         meta:{
             title:'登录',
-            isFooter:false,
+            isButton:false,
             isLogin:true
         }
     },
@@ -247,8 +277,44 @@ export default[
         exact:true,
         meta:{
             title:'登录',
-            isFooter:false,
+            isButton:false,
             isLogin:true,
         }  
+    },
+    { //VIP界面
+        to: '/vip/index/1',
+        path: '/vip/index/1',
+        context: 'VIP+会员',
+        component: Vip,
+        exact: true,
+        meta: {
+            title: 'VIP',
+            isButton: false,
+            isLogin: false,
+        }
+    },
+    { //会员橙卡界面
+        to: '/plus/index',
+        path: '/plus/index',
+        context: '橙PLUS卡',
+        component: VipPlus,
+        exact: true,
+        meta: {
+            title: '橙PLUS卡',
+            isButton: false,
+            isLogin: false,
+        }
+    },
+    {//购买新卡界面  
+        to: '/Cardproduct/index',
+        path: '/Cardproduct/index',
+        context: '购买新卡',
+        component: VipCard,
+        exact: true,
+        meta: {
+            title: '橙PLUS卡',
+            isButton: false,
+            isLogin: false,
+        }
     }
 ]

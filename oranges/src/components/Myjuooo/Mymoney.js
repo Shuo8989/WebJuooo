@@ -1,13 +1,13 @@
 import React from 'react';
 import {NavLink,withRouter} from "react-router-dom";
-import MyjuoooTop from './MyjuoooTop';
+import Topscoll from '../punlic/Topscoll'
 import '../../assets/myjuooo/css/Mymoney.css'
 
 class Mymoney extends React.Component{
     render(){
         return(
             <div>
-                <MyjuoooTop msg={"我的余额"} dis={"block"}></MyjuoooTop>
+                <Topscoll msg={"我的余额"} dis={"block"}></Topscoll>
                 <div className={"Mymoney_top"}>
                     <p className={"Mymoney_yuan"}>账户余额(元)</p>
                     <p className={"Mymoney_num"}>0.00</p>

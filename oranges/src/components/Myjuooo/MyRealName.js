@@ -1,13 +1,13 @@
 import React from 'react';
 import {NavLink,withRouter} from "react-router-dom";
-import MyjuoooTop from './MyjuoooTop';
+import Topscoll from '../punlic/Topscoll'
 import '../../assets/myjuooo/css/MyRealName.css'
 
 class MyRealName extends React.Component{
     render(){
         return(
             <div>
-                <MyjuoooTop msg={"实名认证"} dis={"none"}></MyjuoooTop>
+                <Topscoll msg={"实名认证"} dis={"none"}></Topscoll>
                 <div className={"MyRealName_tab"}>
                     <input className={"MyRealName_tab_t"} type="text" placeholder={"*真实姓名"} />
                     <input className={"MyRealName_tab_t MyRealName_tab_b"}type="text" placeholder={"*身份证号码"} />

@@ -1,12 +1,12 @@
 import React from 'react';
 import {NavLink,withRouter} from "react-router-dom";
-import MyjuoooTop from './MyjuoooTop'
+import Topscoll from '../punlic/Topscoll'
 
 class ChangePayPsw extends React.Component{
     render(){
         return(
             <div>
-                <MyjuoooTop msg={"修改支付密码"} dis={"none"}></MyjuoooTop>
+                <Topscoll msg={"修改支付密码"} dis={"none"}></Topscoll>
                 我是支付密码
             </div>
         )

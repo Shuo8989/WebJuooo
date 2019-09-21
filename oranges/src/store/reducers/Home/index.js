@@ -14,7 +14,10 @@ export default (state=inisState,{type,payload})=>{
             break; 
         case homeType.UP_TOUR_RECOMMEND:
             state.Tourshowlist= payload;
-            break;    
+            break;
+        case homeType.UP_RECOMMEND_LIST:
+            state.recommendlist= payload;
+            break;  
         default:
             break;
     }

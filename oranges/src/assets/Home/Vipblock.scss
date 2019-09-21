@@ -1,7 +1,6 @@
 .vip-block {
     width: 100%;
-    margin-bottom: .6rem;
-    height: 5.5rem;
+    margin-bottom: .8rem;
     .vip-block__advert {
         display: flex;
         -webkit-box-align: center;
@@ -17,27 +16,37 @@
         -webkit-box-pack: justify;
         justify-content: space-between;
         .vip-block__advert__left {
+            .vip-block__advert__left__logo{
+                display: inline-block;
+                width: .53333rem;
+                height: .5rem;
+                background-image: url(./images/home.vip.png);
+                background-repeat: no-repeat;
+                background-size: 100%;
+                vertical-align: middle;
+            }
             .vip-block__advert__left__tip {
-                font-size: .3rem;
+                width: .53333rem;
+                height: .48rem;
+                margin-right:0.3rem;
+                font-size: .4rem;
                 color: #f0d1b0;
                 font-weight: 700;
             }
         }
         .vip-block__advert__right {
             .vip-block__advert__right__lab {
-                font-size: .24rem;
+                font-size: .37333rem;;
                 color: #f0d1b0;
             }
             .icon {
-                font-size: .3rem;
+                font-size: .37rem;
                 color: #f0d1b0;
             }
         }
-        
-        
     }
     .vip-block__conent {
-        padding: 0 .3rem .3rem;
+        padding: 0 .4rem .4rem;
         background-color: #f5f5f5;
         display: flex;
         -webkit-box-pack: justify;
@@ -46,24 +55,26 @@
         .vip-block__conent__power {
             padding:  0;
             .vip-block__conent__power__title {
-                height: .92rem;
-                font-size: .35rem;
+                height: 1.167rem;
+                font-size: .42rem;
                 color:#232323;
                 display: flex;
                 align-items: center;
+                padding-right: .33333rem;
+                justify-content: space-between;
                 font-weight: bold;
             }
             .vip-block__conent__power__wrap {
                 margin-right: .2rem;
                 display: flex;
                 .vip-block__conent__power__item {
-                    width:2.04rem;
+                    width: 2.85333rem;
                     overflow: hidden;
-                    margin-right: .15rem;
+                    margin-right: .2rem;
                     .vip-block__conent__power__click {
                         display: block;
                         img {
-                            width: 2.32rem;
+                            width: 2.82rem;
                             height: 3.22rem;
                         }
                         p {

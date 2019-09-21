@@ -11,7 +11,7 @@ class Tourlist extends React.Component{
                 <div className={'tour-block__wrap'}>
                     <h3>巡回演出</h3>
                     <NavLink to={'/Tour/moreTourShowList'} className={'tour-block__lab-a'}>
-                        <img src={require("../../assets/img/gt.png")} alt={''} />
+                        <img src={require("../../assets/Home/images/gt.png")} alt={''} />
                     </NavLink>
                 </div> 
                 <div className={'tour-block__list'}>

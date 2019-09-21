@@ -6,8 +6,6 @@ import '../../assets/myjuooo/css/Mysecurity.css'
 import mypic from '../../assets/myjuooo/img/myjuooo-mypic.png'
 class Mysecurity extends React.Component{
     render(){
-
-
         return(
             <div>
                 <Topscoll msg={"账户设置"} dis={"block"}></Topscoll>

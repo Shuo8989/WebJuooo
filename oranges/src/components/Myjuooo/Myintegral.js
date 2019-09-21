@@ -1,13 +1,13 @@
 import React from 'react';
 import {NavLink,withRouter} from "react-router-dom";
-import MyjuoooTop from './MyjuoooTop';
+import Topscoll from '../punlic/Topscoll'
 import '../../assets/myjuooo/css/Myintegral.css'
 
 class Myintegral extends React.Component{
     render(){
         return(
             <div>
-                <MyjuoooTop msg={"我的积分"} dis={"block"}></MyjuoooTop>
+                <Topscoll msg={"我的积分"} dis={"block"}></Topscoll>
                 <div className={"Myintegral_top"}>
                     <NavLink to={"/Myjuooo/integralRule"}><span>积分规则</span></NavLink>
                     <p className={"Myintegral_yuan"}>可用积分</p>

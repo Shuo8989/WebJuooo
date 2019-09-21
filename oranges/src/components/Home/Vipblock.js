@@ -3,7 +3,6 @@ import { NavLink} from 'react-router-dom';
 import '../../assets/Home/Vipblock.scss'
 class Vipblock extends React.Component{
     render(){
-        console.log(this.props)
          return (
              <div className={'vip-block'}>
                  <NavLink className={'vip-block__advert'} to={'/vip/index'}>

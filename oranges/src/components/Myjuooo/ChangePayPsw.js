@@ -8,8 +8,8 @@ class ChangePayPsw extends React.Component{
             <div>
 
                 <Topscoll msg={"修改支付密码"} dis={"none"}></Topscoll>
-                我是支付密码
-                <MyjuoooTop msg={"修改支付密码"} dis={"none"}></MyjuoooTop>
+                
+        
                 <div className={"ChangePP_top"}>
                     <span className={"Change_PP_top_left"}>1.验证手机</span>
                     <span className={"Change_PP_top_center"}>{">"}</span>

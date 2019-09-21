@@ -1,13 +1,13 @@
 import React from 'react';
 import {NavLink,withRouter} from "react-router-dom";
-import MyjuoooTop from './MyjuoooTop'
+import Topscoll from '../punlic/Topscoll'
 import '../../assets/myjuooo/css/CouponExchange.css'
 
 class CouponExchange extends React.Component{
     render(){
         return(
             <div className={" CouponExchange"}>
-                <MyjuoooTop msg={"优惠券"} dis={"none"}></MyjuoooTop>
+                <Topscoll msg={"优惠券"} dis={"none"}></Topscoll>
                 <div className={"CouponExchange_box"}>
                     <input type="text" placeholder="优惠券码"/>
                     <span>兑换</span>

@@ -9,7 +9,6 @@ class RecommendBlock extends Component{
     componentDidMount(){
           // 使用滚动时自动加载更多
           let loadMoreFn = this.props.Recommendlist.getRecommendList
-          console.log(loadMoreFn)
           let page=1
           const homelist = this.refs.homelist
           let timeoutId
@@ -44,7 +43,6 @@ class RecommendBlock extends Component{
     render(){ 
         const recommendlist=this.props.Recommendlist.recommendlist.recommend_show_list;
        this.listshow=this.listshow.concat(recommendlist)
-        console.log(11111,this.listshow)
         return (
             <div className={"recommend-block"}>
                 <div className={'recommend-block__wrap '}>

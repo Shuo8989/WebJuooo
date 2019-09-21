@@ -1,0 +1,194 @@
+.plus-wrapper {
+    height: 100%;
+    width: 100%;
+    background: #f5f5f5;
+
+    //头部
+    .plus-title {
+        height: 1.17333rem;
+        position: absolute;
+        top: 0;
+        padding: 0 0.27rem;
+        width: 100%;
+        background: #ffffff;
+        font-size: 0.48rem;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #ebebeb;
+
+        .title__text {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            i {
+                display: block;
+            }
+        }
+    }
+
+    section {
+        position: absolute;
+        top: 1.17333rem;
+        bottom: 1.33333rem;
+        overflow-y: auto;
+        width: 100%;
+
+
+        .card-wrap {
+            width: 309.13px;
+            height: 163.1px;
+            outline: 1px solid red;
+            margin: .4rem .70667rem .66667rem;
+            border-radius: .26667rem;
+            overflow: hidden;
+
+            img {
+                width: 100%
+            }
+        }
+
+        .btn-mid {
+            padding: 0 .81333rem;
+
+            button {
+                display: block;
+                width: 100%;
+                height: 1.2rem;
+                box-sizing: border-box;
+                border-radius: .6rem;
+                color: #fff;
+                font-size: .42667rem;
+                font-weight: 700;
+                background: linear-gradient(-50deg, #ff4d4a, #ff9a34);
+                line-height: 1;
+                padding: 0 .4rem;
+                border: none;
+            }
+        }
+
+        .tips {
+            margin-top: .21333rem;
+            margin-bottom: .49333rem;
+            color: #242424;
+            font-size: .37333rem;
+            display: flex;
+            align-items: center;
+            -webkit-box-pack: center;
+            justify-content: center;
+
+            .change-tip {
+                color: #242424;
+                font-size: .37333rem;
+            }
+
+            .tip-rules {
+                color: #999;
+                margin-left: .22667rem;
+                font-size: .32rem;
+                text-decoration: underline;
+            }
+        }
+
+        .entry-block {
+            width: 100%;
+            overflow-y: auto;
+            background-color: #fff;
+            padding: .66667rem .4rem;
+            box-sizing: border-box;
+            overflow: hidden;
+
+            .en-title {
+                margin-bottom: .53333rem;
+                height: .72rem;
+                line-height: .72rem;
+                color: #232323;
+                font-size: .53333rem;
+                display: flex;
+                justify-content: space-between;
+                font-weight: 700;
+            }
+
+            .en-list {
+                width: 331.2px;
+                height: 4rem;
+                margin-bottom: .88rem;
+                display: flex;
+
+                img {
+                    width: 2.93333rem;
+                    height: 4rem;
+                    flex-shrink: 0;
+                    border: 1px solid red
+                }
+                .item-info{
+                    margin-left: .38667rem;
+                    width: 211.7px;
+                    height: 4rem;
+                    .date{
+                        margin-top: .21333rem;
+                        display: flex;
+                        align-items: center;
+                        color: #232323;
+                    }
+                    .name{
+                        display: flex;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        height: 2.02667rem;
+                    }
+                    .place{
+                        font-size: .32rem;
+                        color: #666;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        width: 5.86667rem;
+                        height: .32rem;
+                        line-height: .32rem;
+                    }
+                    .ratio{
+                        border: 1px solid red;
+                        width: 50.75px;
+                        height: 28px;
+                        margin-top: 6px;
+
+                    }
+                }
+            }
+        }
+    }
+
+    //底部三个按钮
+    .tab {
+        height: 1.33333rem;
+        background-color: #fefefe;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+
+        .ju-btn {
+            height: 1.30667rem;
+            font-size: .45333rem;
+            font-weight: 700;
+            background: linear-gradient(-50deg, #ff4d4a, #ff9a34);
+            display: inline-block;
+            line-height: 1;
+            white-space: nowrap;
+            width: 100%;
+            text-align: center;
+            outline: 0;
+            color: #fff;
+            border: none;
+            padding: 0 .4rem;
+        }
+
+
+    }
+
+
+
+
+}

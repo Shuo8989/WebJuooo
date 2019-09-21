@@ -1,0 +1,47 @@
+
+.CouponExchange_box{
+    height: 1.867rem;
+    padding: 0.533rem 0.373rem 0.267rem 0.533rem;
+
+}
+.CouponExchange_box input{
+    width: 6.667rem;
+    padding: 0 1.067rem 0 0.8rem;
+    height: 0.907rem;
+    border: none;
+    border-radius: 0.08rem;
+    font-size: 0.267rem;
+}
+.CouponExchange_box span{
+    display: inline-block;
+    height:0.907rem ;
+    width: 2rem;
+    background-color: #cccccc;
+    line-height: 0.907rem;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 0.053rem;
+}
+.CouponExchange_tipso{
+    font-size: 0.267rem;
+    float: left;
+    margin-left:0.533rem ;
+    color: #999999;
+}
+.CouponExchange_tipst{
+    font-size: 0.267rem;
+    float: right;
+    margin-right:0.373rem ;
+    color: #999999;
+    text-decoration: underline;
+}
+.CouponExchange_bottom{
+    height: 0.987rem;
+    padding-bottom: 1.067rem;
+    position: absolute;
+    bottom: 0;
+    font-size: 0.373rem;
+    width: 100%;
+    line-height:0.987rem;
+    text-align: center;
+}

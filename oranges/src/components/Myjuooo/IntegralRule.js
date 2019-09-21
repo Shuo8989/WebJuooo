@@ -1,13 +1,13 @@
 import React from 'react';
 import {NavLink,withRouter} from "react-router-dom";
-import MyjuoooTop from './MyjuoooTop';
+import Topscoll from '../punlic/Topscoll'
 import '../../assets/myjuooo/css/Myintegral.css'
 
 class IntegralRule extends React.Component{
     render(){
         return(
             <div>
-                <MyjuoooTop msg={"积分规则"} dis={"block"}></MyjuoooTop>
+                <Topscoll msg={"积分规则"} dis={"block"}></Topscoll>
                 <div className={"IntegralRule_box"}>
                     <p>会员在聚橙网获得的积分，可用于积分换购，会员可通过以下几种渠道获取积分:</p>
                 <div>

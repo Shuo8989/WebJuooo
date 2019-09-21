@@ -1,0 +1,44 @@
+.Mymoney_top{
+    height: 3.733rem;
+    width: 100%;
+    background-image: url("../img/Myjuooo_integral.jpg");
+    background-size: 100%;
+    overflow: hidden;
+}
+.Mymoney_yuan{
+    margin-top: 0.8rem;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.32rem;
+}
+.Mymoney_num {
+    margin-top: 0.2rem;
+    font-size:0.96rem;
+    color: #ffffff;
+    text-align: center;
+    height: 1.067rem;
+    line-height: 1.067rem;
+}
+.Mymoney_center{
+    height: 1.12rem;
+    margin-left: 0.427rem;
+    line-height: 1.12rem;
+    text-align: left;
+    font-size: 0.32rem;
+    color: #999999;
+}
+.Mymoney_but{
+    width: 100%;
+    height: 6.933rem;
+    padding: 0.267rem;
+    background-color: #ffffff;
+}
+.Mymoney_no{
+    height: 6.4rem;
+    padding: 0.267rem;
+    background-color: #ffffff;
+    line-height: 6.4rem;
+    text-align: center;
+    color: #999999;
+    font-size: 0.373rem;
+}

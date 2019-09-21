@@ -3,7 +3,6 @@ import '../../assets/VipPlus/VipPlus.scss'
 import { connect } from 'react-redux';//高阶组件
 import { bindActionCreators } from 'redux'//绑定并执行一次函数
 import vipPlusCreator from '../../store/actionCreator/Vip';//首页的数据请求方法
-import {withRouter} from 'react-router-dom'
 import plusinfo from '../../assets/img/plus-card.jpg'
 import viprights from '../../assets/img/vip-property.jpg'
 import plussave from '../../assets/img/save-money.png'
@@ -15,7 +14,7 @@ class VipPlus extends React.Component {
             <div className="plus-wrapper">
                 <header className={"plus-title"}>
                     <div className={"title__text"}>
-                        <i className={"iconfont iconfanhui1"} onClick={this.back.bind(this)}></i>
+                        <i className={"iconfont iconfanhui1"}></i>
                         <span>橙PLUS卡</span>
                         <i className={"iconfont iconsangedian1"}></i>
                     </div>
@@ -51,10 +50,7 @@ class VipPlus extends React.Component {
             </div>
         )
     }
-    back(){
-        console.log(this.props);
-        this.props.history.go(-1)
-    }
+
 
 }
-export default withRouter(VipPlus)
+export default VipPlus

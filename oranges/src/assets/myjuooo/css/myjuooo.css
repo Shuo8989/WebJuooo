@@ -12,7 +12,7 @@ body{
 .myjuooo_top{
     /*大的黄色背景图*/
     width: 100%;
-    height: 210px;
+    height: 5.6rem;
     position: relative;
     background: url("../img/mybgPage.png") no-repeat;
     background-size:100% ;
@@ -28,7 +28,7 @@ body{
 .myjuooo_me{
     /*个人信息大白块*/
     width: 9.2rem;
-    height: 155px;
+    height: 4.133rem;
     position: absolute;
     background: #fff;
     box-shadow: 0 0.05333rem 0.4rem 0.02667rem rgba(35,35,35,.08);
@@ -39,7 +39,7 @@ body{
 .myjuooo_metop{
     /*头像 名称 ID 小条*/
     width: 9.2rem;
-    height: 51px;
+    height: 1.36rem;
     padding: 0 0.416rem;
     position: relative;
 }
@@ -59,24 +59,24 @@ body{
 }
 .myjuooo_me .myjuooo_myname{
     /*姓名*/
-    font-size: 15px;
+    font-size: 0.4rem;
     font-weight: 700;
     position: absolute;
-    left: 90px;
-    top:11px
+    left: 2.4rem;
+    top:0.293rem;
 }
 .myjuooo_me .myjuooo_myid{
     /*ID*/
-    font-size: 12px;
+    font-size: 0.32rem;
     position: absolute;
     bottom: 0;
-    left: 90px;
+    left: 2.4rem;
 }
 
 .myjuooo_myvip{
     /*VIP黄色小块*/
     display: block;
-    width: 81px;
+    width: 2.16rem;
     float: right;
     font-size: .37333rem;
     color: #454341;
@@ -88,8 +88,8 @@ body{
 
 .myjuooo_bottom{
     /*白色大块中的四小块*/
-    width: 345px;
-    height: 80px;
+    width: 9.2rem;
+    height: 2.133rem;
     position: absolute;
     bottom: 0;
     display: flex;
@@ -98,25 +98,25 @@ body{
 .myjuooo_btm{
     /*四小块的设置*/
     display: inline-block;
-    width: 86px;
-    height: 46px;
-    margin: 15px 0  20px 0;
+    width: 2.293rem;
+    height: 1.227rem;
+    margin: 0.4rem 0  0.533rem 0;
 }
 .myjuooo_btm_num{
     /*四小块数字*/
     display: block;
     margin: 0  auto;
     text-align: center;
-    font-size: 20px;
+    font-size: 0.533rem;
     color: #ff6743;
 }
 .myjuooo_btm_rline{
     /*四小块的中间线*/
     display: inline-block;
-    width: 1px;
+    width: 0.027rem;
     background-color:  #ebebeb;
-    height: 30px;
-    margin-top: 25px;
+    height: 0.8rem;
+    margin-top: 0.667rem;
 }
 .MyjuoooMine{
     /*四小块的文字*/

@@ -18,7 +18,7 @@ export default class Hotlist extends React.Component{
                 <div className={'hot-block__lab'}>
                     <h3>热门演出</h3>
                     <NavLink to={""} className={'hot-block_lab-a'}>
-                        <img src={require("../../assets/Home/images/gt.png")} alt="" />
+                        <img src={require("../../assets/img/gt.png")} alt="" />
                     </NavLink>
                 </div>
                 <div className={"hot-block__list"}>

@@ -6,9 +6,9 @@ import Banner from '../../components/Home/Banner'//轮播图组件
 import Advertion from '../../components/Home/Advertion'//广告组件
 import Hotlist from '../../components/Home/Hotlist'//热门演出组件
 import Tourlist from '../../components/Home/Tourlist'  //巡回演出组件
-import Vipblock from '../../components/Home/Vipblock'; //vipblock组件
-import Recommend from '../../components/Home/Recommend' //为你推荐
+import vipblock from '../../components/Home/Vipblock' //vipblock组件
 import homeCreator from '../../store/actionCreator/Home';//首页的数据请求方法
+import Vipblock from '../../components/Home/Vipblock';
 class Home extends React.Component{
     componentDidMount(){
         this.props.getClassifyHome({
@@ -18,15 +18,11 @@ class Home extends React.Component{
          this.props.getVipHomeSchedular()
          this.props.getHotsRecommendList()
          this.props.getTourRecommendList()
-         this.props.getRecommendList({page:1})
     }
-
     render(){
         const propst=this.props
         return(
-            <div className={'home'} 
-                ref={(homeload)=>this.tableEl=homeload}
-            >
+            <div className={'home'}>
                 <div className={'banner'}>
                     {//轮播图
                         propst.classifyHome.slide_list?<Banner banner_list={propst.classifyHome.slide_list}></Banner>:null
@@ -44,10 +40,6 @@ class Home extends React.Component{
                     {
                         propst.vipHomeSchedular.discountList?<Vipblock {...this.props.vipHomeSchedular}></Vipblock>:null
                     }
-                    
-                    {
-                        this.props.recommendlist.recommend_show_list?<Recommend Recommendlist={this.props} ></Recommend>:null
-                    }
             </div>
         )
     }
@@ -58,8 +50,7 @@ export default connect(
         classifyHome:state.home.ClassifyHome,
         vipHomeSchedular:state.home.vipHomeSchedular,
         HotsShowlist:state.home.HotsShowlist,
-        Tourshowlist:state.home.Tourshowlist,
-        recommendlist:state.home.recommendlist
+        Tourshowlist:state.home.Tourshowlist
     })
     ,dispatch=>bindActionCreators(homeCreator,dispatch)
     )(Home)

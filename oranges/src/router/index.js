@@ -8,6 +8,8 @@ import TheatreList from '../components/Theatre/TheatreList';
 import ShowDetail from '../components/Theatre/ShowDetail';
 //票夹
 import Eticket from '../views/eticket/Eticket'
+//日历
+import Calendar from '../components/Calendar'
 //我的
 import Myjuooo from '../views/myjuooo/Myjuooo.js'
 import Mysecurity from "../components/Myjuooo/Mysecurity";
@@ -319,14 +321,25 @@ export default[
             isLogin: false,
         }
     },
-    {
+    {//演唱会
         path:'/show/showsLibrary',
         context:'演唱会',
         component:Vocalconcert,
         exact:true,
         meta:{
             title:'演出',
-            isFooter:false,
+            isButton:false,
+            isLogin:false
+        }
+    },
+    {//演出
+        path:'/calendar/index',
+        context:'日历',
+        component:Calendar,
+        exact:true,
+        meta:{
+            title:'日历',
+            isButton:false,
             isLogin:false
         }
     }

@@ -123,7 +123,7 @@ class Show extends React.Component{
         this.setcategory()
     }
     back(){
-        this.props.history.go(-1)
+        this.props.history.push('/')
     }
     setcategory(category = 0){
         let page = this.state.page
@@ -151,7 +151,6 @@ class Show extends React.Component{
             visible: true,
         });
     };
-
     onClose = () => {
         this.setState({
             visible: false,

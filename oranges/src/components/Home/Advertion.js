@@ -85,7 +85,7 @@ import {
                             </NavLink>
                         </li>
                         <li className={'operation__item'}>
-                            <NavLink to={''} className={'operation__item__block1'}>
+                            <NavLink to={'/vip/index/1'} className={'operation__item__block1'}>
                                 <div>
                                     <h3 className={'operation__item__block__title'}>{classifyHome.classifyHome.operation_list[1].name}</h3>
                                     <p dangerouslySetInnerHTML={{__html:classifyHome.classifyHome.operation_list[1].describe }}></p>
@@ -109,7 +109,7 @@ import {
                             </NavLink>
                         </li>
                         <li className={'operation__item'}>
-                            <NavLink to={''} className={'operation__item__block2'}>
+                            <NavLink to={'/calendar/index'} className={'operation__item__block2'}>
                                 <div>
                                     <h3 className={'operation__item__block__title'}>{classifyHome.classifyHome.operation_list[3].name}</h3>
                                     <p dangerouslySetInnerHTML={{__html:classifyHome.classifyHome.operation_list[3].describe }}></p>

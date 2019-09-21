@@ -1,0 +1,77 @@
+.Myintegral_top{
+    height: 3.733rem;
+    width: 100%;
+    background-image: url("../img/Myjuooo_integral.jpg");
+    background-size: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.Myintegral_yuan{
+    margin-top: 0.8rem;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.32rem;
+}
+.Myintegral_num {
+    margin-top: 0.2rem;
+    font-size:0.96rem;
+    color: #ffffff;
+    text-align: center;
+    height: 1.067rem;
+    line-height: 1.067rem;
+}
+.Myintegral_center{
+    height: 1.12rem;
+    margin-left: 0.427rem;
+    line-height: 1.12rem;
+    text-align: left;
+    font-size: 0.32rem;
+    color: #999999;
+}
+.Myintegral_but{
+    width: 100%;
+    height: 6.933rem;
+    padding: 0.267rem;
+    background-color: #ffffff;
+}
+.Myintegral_no{
+    height: 6.4rem;
+    padding: 0.267rem;
+    background-color: #ffffff;
+    line-height: 6.4rem;
+    text-align: center;
+    color: #999999;
+    font-size: 0.373rem;
+}
+.Myintegral_scoreshop{
+    margin: 0.213rem auto 0 auto;
+    padding-left:0.493rem ;
+    width: 2.4rem;
+    height: 0.8rem;
+    background-color: #ffffff;
+    text-align: center;
+    font-size: 0.32rem;
+    line-height: 0.747rem;
+    color: #ff7919;
+    border-radius: 0.08rem;
+}
+.Myintegral_top span{
+    display: block;
+    position: absolute;
+    right: 0.267rem;
+    top: 0.267rem;
+    font-size: 0.32rem;
+    color: #ffffff;
+}
+.IntegralRule_box{
+    padding: 0.533rem 0.267rem;
+    text-align: left;
+    line-height: 0.613rem;
+    font-size: 0.373rem;
+}
+.IntegralRule_box div{
+    margin: 0.4rem auto;
+    padding: 0.267rem 0;
+    border-top:1px solid #cccccc ;
+    border-bottom:1px solid #cccccc ;
+}

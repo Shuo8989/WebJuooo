@@ -18,9 +18,10 @@ import Mymoney from '../components/Myjuooo/Mymoney'
 import Myintegral from '../components/Myjuooo/Myintegral'
 import CouponExchange from '../components/Myjuooo/CouponExchange'
 import MyOrderList from '../components/Myjuooo/MyOrderList'
-import Cardproduct from  '../components/Myjuooo/Cardproduct'
 import Myaddress from '../components/Myjuooo/Myaddress'
 import Feedback from '../components/Myjuooo/Feedback'
+import IntegralRule from '../components/Myjuooo/IntegralRule'
+import MyjuoooScores from '../components/Myjuooo/MyjuoooScores'
 //登陆注册(完成)
 import Login from '../views/Login/Login'
 import ResetPassword from '../views/Login/ResetPassword'
@@ -163,8 +164,29 @@ export default[
             isButton:false,
             isLogin:true
         }
-    },
-    {//我的-积分
+    },{//我的-积分规则
+        to:'/Myjuooo/integralRule',
+        path:'/Myjuooo/integralRule',
+        context:'积分规则',
+        component:IntegralRule,
+        exact:true,
+        meta:{
+            title:'聚橙网',
+            isButton:false,
+            isLogin:true
+        }
+    },{//我的-积分商城
+        to:'/Scores/index',
+        path:'/Scores/index',
+        context:'积分商城',
+        component:MyjuoooScores,
+        exact:true,
+        meta:{
+            title:'聚橙网',
+            isButton:false,
+            isLogin:true
+        }
+    }, {//我的-积分
         to:'/Myjuooo/myintegral',
         path:'/Myjuooo/myintegral',
         context:'我的积分',
@@ -199,20 +221,7 @@ export default[
             isButton:false,
             isLogin:true
         }
-    },
-    {//我的-卡包
-        to:'/Cardproduct/index',
-        path:'/Cardproduct/index',
-        context:'我的卡包',
-        component:Cardproduct,
-        exact:true,
-        meta:{
-            title:'聚橙网',
-            isButton:false,
-            isLogin:true
-        }
-    },
-    {//我的-地址
+    }, {//我的-地址
         to:'/myjuooo/myaddress',
         path:'/myjuooo/myaddress',
         context:'我的地址',
@@ -308,8 +317,8 @@ export default[
         }
     },
     {//购买新卡界面  
-        to: '/Cardproduct/index',
-        path: '/Cardproduct/index',
+        to: '/Cardproduct/index?current=market',
+        path: '/Cardproduct/index?current=market',
         context: '购买新卡',
         component: VipCard,
         exact: true,

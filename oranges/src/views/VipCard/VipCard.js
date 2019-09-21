@@ -3,32 +3,31 @@ import '../../assets/VipCard/VipCard.scss'
 import axios from 'axios'
 import Swiper from 'swiper'
 import 'swiper/dist/css/swiper.min.css'
-import { NavLink, Link } from 'react-router-dom';
-
+import { NavLink, Link, withRouter } from 'react-router-dom';
+import vipCardCreator from '../../store/actionCreator/Vip/vipCard.js'
 
 
 import { connect } from 'react-redux';//高阶组件
 import { bindActionCreators } from 'redux'//绑定并执行一次函数
-import vipPlusCreator from '../../store/actionCreator/Vip';//首页的数据请求方法
 import plusinfo from '../../assets/img/plus-card.jpg'
 import viprights from '../../assets/img/vip-property.jpg'
 import plussave from '../../assets/img/save-money.png'
 
 class VipCard extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            adList: [],
-            cardList: []
-        }
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         adList: [],
+    //         cardList: []
+    //     }
 
-    }
+    // }
     render() {
         return (
             <div className="plus-wrapper">
                 <header className={"plus-title"}>
                     <div className={"title__text"}>
-                        <i className={"iconfont iconfanhui1"}></i>
+                        <i className={"iconfont iconfanhui1"} onClick={this.back.bind(this)}></i>
                         <span>购买新卡</span>
                         <i className={"iconfont iconsangedian1"}></i>
                     </div>
@@ -40,7 +39,7 @@ class VipCard extends React.Component {
                         <div className="swiper-container sw-swiper">
                             <div className="swiper-wrapper sw-swiper-wrapper">
                                 {
-                                    this.state.adList.map((v, i) => {
+                                    this.props.adList.map((v, i) => {
                                         const str = (v.mb_href).replace("https://m.juooo.com", "")
                                         return (
                                             <div className="swiper-slide sw-swiper-slide" key={i}>
@@ -112,21 +111,24 @@ class VipCard extends React.Component {
                                 </span>
                         </div>
                         {
-                            this.state.cardList.store_card ? (
-                                this.state.cardList.store_card.map(v => (
-                                    <div className="card-list" key={v.id}>
-                                        <div className="orange-plus">
-                                            <div className="card-cell"><img src={v.card_image} alt="" /></div>
-                                            <div className="card-cell-desc">
-                                                <div className="card-cell-desc-top">{v.name}</div>
-                                                <div className="card-cell-desc-middle">有效期:{v.avail_mouth ? `${v.avail_mouth}个月` : (v.effect_end_time === "1970/01/01" ? "长期有效" : v.effect_end_time)}</div>
-                                                <div className="card-cell-desc-bottom">
-                                                    <span className="card-price">￥{v.card_price}</span>
-                                                    <span className="card-give">{v.use_limit ? `兑换券${v.use_limit}张` : "赠送VIP+"}</span>
+                            this.props.cardList.store_card ? (
+                                this.props.cardList.store_card.map(v => (
+                                    // <NavLink to={pathname:"",state:{}}}>
+                                        <div className="card-list" key={v.id}>
+                                            <div className="orange-plus">
+                                                <div className="card-cell"><img src={v.card_image} alt="" /></div>
+                                                <div className="card-cell-desc">
+                                                    <div className="card-cell-desc-top">{v.name}</div>
+                                                    <div className="card-cell-desc-middle">有效期:{v.avail_mouth ? `${v.avail_mouth}个月` : (v.effect_end_time === "1970/01/01" ? "长期有效" : v.effect_end_time)}</div>
+                                                    <div className="card-cell-desc-bottom">
+                                                        <span className="card-price">￥{v.card_price}</span>
+                                                        <span className="card-give">{v.use_limit ? `兑换券${v.use_limit}张` : "赠送VIP+"}</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    // </NavLink>
+
                                 ))
                             ) : null
 
@@ -139,21 +141,25 @@ class VipCard extends React.Component {
                             品类 • 次卡
                         </div>
                         {
-                            this.state.cardList.cate_card ? (
-                                this.state.cardList.cate_card.map(v => (
-                                    <div className="card-list" key={v.id}>
-                                        <div className="orange-plus" >
-                                            <div className="card-cell"><img src={v.card_image} alt="" /></div>
-                                            <div className="card-cell-desc">
-                                                <div className="card-cell-desc-top">{v.name}</div>
-                                                <div className="card-cell-desc-middle">有效期:{v.avail_mouth ? `${v.avail_mouth}个月` : (v.effect_end_time === "1970/01/01" ? "长期有效" : v.effect_end_time)}</div>
-                                                <div className="card-cell-desc-bottom">
-                                                    <span className="card-price">￥{v.card_price}</span>
-                                                    <span className="card-give">{v.use_limit ? `兑换券${v.use_limit}张` : "赠送VIP+"}</span>
+                            this.props.cardList.cate_card ? (
+                                this.props.cardList.cate_card.map(v => (
+                                    // {cardType=(v.id=="228"?"/cardhappy":"/buyShow")}
+                                    <NavLink to={{pathname:{}}}>
+                                        <div className="card-list" key={v.id}>
+                                            <div className="orange-plus" >
+                                                <div className="card-cell"><img src={v.card_image} alt="" /></div>
+                                                <div className="card-cell-desc">
+                                                    <div className="card-cell-desc-top">{v.name}</div>
+                                                    <div className="card-cell-desc-middle">有效期:{v.avail_mouth ? `${v.avail_mouth}个月` : (v.effect_end_time === "1970/01/01" ? "长期有效" : v.effect_end_time)}</div>
+                                                    <div className="card-cell-desc-bottom">
+                                                        <span className="card-price">￥{v.card_price}</span>
+                                                        <span className="card-give">{v.use_limit ? `兑换券${v.use_limit}张` : "赠送VIP+"}</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </NavLink>
+
                                 ))
                             ) : null
 
@@ -165,8 +171,8 @@ class VipCard extends React.Component {
                             城市 • 次卡
                         </div>
                         {
-                            this.state.cardList.once_card ? (
-                                this.state.cardList.once_card.map(v => (
+                            this.props.cardList.once_card ? (
+                                this.props.cardList.once_card.map(v => (
                                     <div className="card-list" key={v.id}>
                                         <div className="orange-plus" >
                                             <div className="card-cell"><img src={v.card_image} alt="" /></div>
@@ -204,16 +210,22 @@ class VipCard extends React.Component {
             </div>
         )
     }
+    back() {
+        console.log(this.props);
+        this.props.history.go(-1)
+    }
     async componentDidMount() {
-        const { data } = await axios.get("https://api.juooo.com/Card/index/hotBanner?version=6.0.5&referer=2 ")
-        // console.log(data);
-        const cardata = await axios.get("https://api.juooo.com/Card/index/getCardGroupList?version=6.0.5&referer=2")
-        // console.log(cardata.data);
-        this.setState({
-            adList: data,
-            cardList: cardata.data
-        })
-        new Swiper('.sw-swiper', {
+        // const { data } = await axios.get("https://api.juooo.com/Card/index/hotBanner?version=6.0.5&referer=2 ")
+        // // console.log(data);
+        // const cardata = await axios.get("https://api.juooo.com/Card/index/getCardGroupList?version=6.0.5&referer=2")
+        // // console.log(cardata.data);
+        // this.setState({
+        //     adList: data,
+        //     cardList: cardata.data
+        // })
+        await this.props.getAdList();
+        await this.props.getCardList();
+        let mySwiper = new Swiper('.sw-swiper', {
             direction: 'horizontal', // 垂直切换选项
             loop: true, // 循环模式选项
             speed: 300,//自动播放
@@ -227,18 +239,11 @@ class VipCard extends React.Component {
         })
     }
 }
-export default VipCard
+export default connect(state => (console.log(state), {
+    adList: state.vipCard.adList,
+    cardList: state.vipCard.cardList,
+}),
+    dispatch =>
+        bindActionCreators(vipCardCreator, dispatch)
+)(withRouter(VipCard))
 
-
-
-{/* <div className="orange-plus">
-                                <div className="card-cell"><img src="https://gw.alicdn.com/tps/TB1W_X6OXXXXXcZXVXXXXXXXXXX-400-400.png" alt="" /></div>
-                                <div className="card-cell-desc">
-                                    <div className="card-cell-desc-top">城卡plus</div>
-                                    <div className="card-cell-desc-middle">有效期12</div>
-                                    <div className="card-cell-desc-bottom">
-                                        <span className="card-price">￥999</span>
-                                        <span className="card-give">{}</span>
-                                    </div>
-                                </div>
-                            </div> */}

@@ -24,7 +24,7 @@ export default{
     getCardList(){
         return async (dispatch)=>{//优先购票接口数据
             const {data} = await axios.get('/Apijcw/vip/index/getPriorBuyList?page=1&limit=1000&version=6.0.5&referer=2');
-            const newdata=data.list.slice(0, 2)
+            const newdata= data.list.length>=2?data.list.slice(0, 2):data.list
             dispatch(changeCardList(newdata))
         }
     },

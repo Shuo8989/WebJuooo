@@ -1,0 +1,4 @@
+export default{
+    CHANGE_AD_LIST:" CHANGE_AD_LIST",
+    CHANGE_CARD_LIST:"CHANGE_CARD_LIST"
+}

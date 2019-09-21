@@ -3,12 +3,14 @@ import {
 }from 'redux'
 import home from './Home'
 import vip from './Vip'
+import vipCard from './Vip/vipCard.js'
 import Theatre from './Theatre';
 import TheatreList from './Theatre/TheatreList';
 
 export default combineReducers({
     home,
     vip,
+    vipCard,
     Theatre,
     TheatreList
 })

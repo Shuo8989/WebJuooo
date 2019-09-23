@@ -1,8 +1,8 @@
 import React from 'react'
 import '../../assets/VipPlus/VipPlus.scss'
-import { connect } from 'react-redux';//高阶组件
-import { bindActionCreators } from 'redux'//绑定并执行一次函数
-import vipPlusCreator from '../../store/actionCreator/Vip';//首页的数据请求方法
+// import { connect } from 'react-redux';//高阶组件
+// import { bindActionCreators } from 'redux'//绑定并执行一次函数
+// import vipPlusCreator from '../../store/actionCreator/Vip';//首页的数据请求方法
 import {withRouter} from 'react-router-dom'
 import plusinfo from '../../assets/img/plus-card.jpg'
 import viprights from '../../assets/img/vip-property.jpg'
@@ -52,7 +52,7 @@ class VipPlus extends React.Component {
         )
     }
     back(){
-        console.log(this.props);
+        // console.log(this.props);
         this.props.history.go(-1)
     }
 

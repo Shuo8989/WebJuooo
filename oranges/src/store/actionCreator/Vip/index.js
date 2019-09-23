@@ -1,5 +1,4 @@
 import axios from 'axios';
-// import {CHANGE_CARD_LIST,CHANGE_DISCOUNT_LIST,CHANGE_FREE_LIST} from '../../actionType/Vip'
 import datatype from '../../actionType/Vip'
 
 const changeCardList =(payload)=>{//优先购票

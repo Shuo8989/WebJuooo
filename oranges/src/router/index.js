@@ -318,8 +318,8 @@ export default [{ //首页
         }
     },
     {//新卡详情界面
-        to: '/Cardproduct/desc',
-        path: '/Cardproduct/desc',
+        to: '/Cardproduct/buyShow/card_id/:id',
+        path: '/Cardproduct/buyshow/card_id/:id',
         context: '新卡详情',
         component: VipCardDesc,
         exact: true,

@@ -216,7 +216,7 @@ class Vip extends React.Component {
         )
     }
     back() {
-        console.log(this.props);
+        // console.log(this.props);
         this.props.history.go(-1)
     }
     async componentDidMount() {
@@ -243,7 +243,7 @@ class Vip extends React.Component {
 
     }
 }
-export default connect(state => (console.log(state), {
+export default connect(state => ( {
     cardList: state.vip.cardList,
     discountList: state.vip.discountList,
     freeList: state.vip.freeList

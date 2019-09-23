@@ -1,0 +1,61 @@
+.ChangePP_top{
+    height: 1.04rem;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 0 0.4rem;
+    text-align: left;
+    line-height: 1.04rem;
+}
+.Change_PP_top_center{
+    margin:0 0.4rem
+}
+.Change_PP_top_left{
+    color: #ff7919;
+}
+.Change_PP_bottom{
+    height: 4.32rem;
+    width: 100%;
+    margin-top: 0.293rem;
+}
+.Change_PP_bottom_tab{
+    background-color: #ffffff;
+    width: 100%;
+    height: 2.453rem;
+}
+.Change_pbt_t{
+    height: 1.2rem;
+    width: 8.533rem;
+    margin: 0 0 0 0.8rem;
+    text-align: left;
+    line-height: 1.2rem;
+    border-bottom: 0.027rem solid #e7e7e7;
+    font-size: 0.427rem;
+}
+.Change_pbt_b{
+    border: none;
+}
+.Change_pbt_b input {
+    border: none;
+}
+.Change_pbtb_but{
+    display: inline-block;
+    border: 0.027rem solid #b2b2b2 ;
+    width: 2.267rem;
+    font-size: 0.373rem;
+    height: 0.773rem;
+    text-align: center;
+    line-height: 0.773rem;
+    float: right;
+    margin-top: 0.2rem;
+    border-radius: 0.053rem;
+}
+.changLoginPSW_btn{
+    width:344px;
+    height: 43px;
+    background-color: #ff7919;
+    margin: 25px 15px 15px 16px ;
+    text-align: center;
+    line-height: 43px;
+    color: #ffffff;
+    border-radius: 4px;
+}

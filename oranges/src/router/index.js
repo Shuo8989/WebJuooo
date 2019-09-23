@@ -61,8 +61,8 @@ export default[
         }
     },
     {//剧院列表
-        to:'/theatre/index',
-        path:'/theatre/index',
+        to:'/theatre/index/:id',
+        path:'/theatre/index/:id',
         context:'剧院列表信息',
         component:TheatreList,
         meta:{
@@ -72,8 +72,8 @@ export default[
         }
     },
     {//表演详情
-        to:'/ticket',
-        path:'/ticket', 
+        to:'/ticket/:id',
+        path:'/ticket/:id', 
         context:'演出详情',
         component:ShowDetail,
         meta:{

@@ -1,24 +1,24 @@
 import React from 'react';
 import "../../assets/Theatre/TheatreList.css";
-import {NavLink} from 'react-router-dom';
+import {NavLink,withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
-import {withRouter}from 'react-router-dom';
 import {bindActionCreators} from 'redux';
 import changeTheatreList from '../../store/actionCreator/Theatre/TheatreList';
 class TheatreList extends React.Component{
     render(){
+        console.log(this.props);
         const {TheatreListInfo}=this.props.TheatreListInfo.TheatreList;
-        console.log(this.props.location.state.id,TheatreListInfo);
-        const theatreinfo=this.props.location.state.id
-        const data=TheatreListInfo.find((v,i)=>v.id===theatreinfo);
+        console.log(this.props.match.params.id,TheatreListInfo);
+        const theatreinfo=this.props.match.params.id;
+        const data=TheatreListInfo.find((v,i)=>v.id==theatreinfo);
         console.log(data);
         return(
-             <div>
+             <div className="theatreList-bg">
             {
                 data?(
             <>
                 <div className="navbar">
-                    <NavLink to="/theatre/theatreList"><span className="icon-menu-left"> &lt;</span></NavLink> 
+                    <NavLink to="/theatre/theatreList"><span className="icon-menu-left iconfont iconfanhui1" ></span></NavLink> 
                     <span className="center">{data.name}</span>
                     <NavLink to={"/"}><img className="icon-option-horizontal" src={require("../../assets/Theatre/img/0.png")} alt=""/></NavLink>
                 </div>
@@ -29,10 +29,10 @@ class TheatreList extends React.Component{
                     <a href=""><img src={require("../../assets/Theatre/img/icon-theater.png")}/><p>剧院</p></a>
                     <a href=""><img src={require("../../assets/Theatre/img/icon-offer.png")}/><p>特惠</p></a>
                 </div>
-               <p className="title">热门演出</p>
+               <p className="theatreList-hot-title">热门演出</p>
                <div className="list-wrap">
                    {data.showList.map((v,i)=>(
-                    <NavLink to="/ticket" key={i} className="show-item">
+                    <NavLink to={"/ticket/"+v.id} key={i} className="show-item">
                         <img src={v.pic} alt=""/>
                         <div className="show-right">
                             <p className="name">{v.schedular_name}</p>
@@ -50,23 +50,20 @@ class TheatreList extends React.Component{
             </>
                 ):null}
                 <div className="load-more">
-                    <NavLink className="link" to="/Theatre/showList">
+                    <NavLink className="link" to="/show/showsLibrary">
                         查看全部演出
+                         <i>&gt;</i>
                     </NavLink>
-                    <i>&gt;</i>
+                   
                 </div>
             </div>
         ) 
     }
-    componentWillMount(){
-        this.props.getTheatreInfo();
-    }
     componentDidMount(){
-        // console.log(this.props.TheatreList.TheatreListInfo);
         this.props.getTheatreInfo();
     }
 }
-function mapStateToProps(state,props){
+function mapStateToProps(state){
     console.log(state);
     return{
         TheatreListInfo:state

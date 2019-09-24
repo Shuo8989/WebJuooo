@@ -1,4 +1,12 @@
 /*剧院信息*/
+.title-text-sigle{
+      background: #fefefe;
+      position: fixed;
+      width: 100%;
+}
+.theatre-height{
+    height: 1.17333rem;
+}
 .title-text-sigle h3{
     height:1.17333rem;
     padding:0 1.33333rem;
@@ -7,6 +15,7 @@
     color: #232323;
     line-height: 1.17333rem;
     border-bottom:.01rem solid #eee;
+    margin-bottom: 0;
 }
 .theater-body-main{
     height:100%;
@@ -53,7 +62,7 @@
 .theater-slide{
     margin-top:3% ;
     display: flex;
-    overflow: auto;
+    /* overflow: auto; */
 }
 .theater-slide-info{
     width:124.938px;
@@ -87,5 +96,6 @@
 .show-pic{
     width:2.85333rem;
    height:155.78px;
+   
 }
 

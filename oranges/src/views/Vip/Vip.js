@@ -4,11 +4,11 @@ import Swiper from 'swiper'
 import 'swiper/dist/css/swiper.min.css'
 import axios from 'axios'
 import {
-    NavLink
+    NavLink, withRouter
 } from 'react-router-dom';
 import { connect } from 'react-redux';//高阶组件
-import {bindActionCreators} from 'redux'//绑定并执行一次函数
-import vipCreator from '../../store/actionCreator/Vip';//首页的数据请求方法
+import { bindActionCreators } from 'redux'//绑定并执行一次函数
+import vipCreator from '../../store/actionCreator/Vip';//action命令
 
 import doubleimg from '../../assets/img/vip_plus_double_points.e9a6530.png'
 import freepostimg from '../../assets/img/vip_plus_free_shipping.2edb583.png'
@@ -28,8 +28,8 @@ class Vip extends React.Component {
         return (
             <div className={"vip-plus-wrapper"}>
                 <header className={"vip-plus__title"}>
-                    <div className={"title__text"}>
-                        <i className={"iconfont iconfanhui1"}></i>
+                    <div className={"title__text"} >
+                        <i className={"iconfont iconfanhui1"} onClick={this.back.bind(this)}></i>
                         <span>VIP + 会员</span>
                         <i className={"iconfont iconsangedian1"}></i>
                     </div>
@@ -126,39 +126,37 @@ class Vip extends React.Component {
                         </div>
                     </div>
                     {/* 优先购票 */}
-                    <div className="vip-plus__prior-buy">
+                    {this.props.cardList.length>0 ?(<div className="vip-plus__prior-buy">
                         <div className="entry-block__title">优先购票</div>
                         <div className="vip-buy__content">
                             {/* 遍历渲染数据 */}
-                            {
-                                this.props.cardList.map(v => (
-                                    <div className="prior-buy-card" key={v.schedular_id}>
-                                        <div className="show-img" >
-                                            <img src={v.pic} alt="" />
+                            {this.props.cardList.map(v => (
+                                <div className="prior-buy-card" key={v.schedular_id}>
+                                    <div className="show-img" >
+                                        <img src={v.pic} alt="" />
+                                    </div>
+                                    <div className="show-item">
+                                        <div className="data-week">
+                                            <span className="data-week__date">{v.date}</span>
+                                            <span className="data-week__week">{v.week}</span>
                                         </div>
-                                        <div className="show-item">
-                                            <div className="data-week">
-                                                <span className="data-week__date">{v.date}</span>
-                                                <span className="data-week__week">{v.week}</span>
-                                            </div>
-                                            <div className="item-info-name">
-                                                <p className="item-info-name-content">{v.schedular_name}</p>
-                                            </div>
-                                            <div className="item-info-place">{v.venue_name}</div>
+                                        <div className="item-info-name">
+                                            <p className="item-info-name-content">{v.schedular_name}</p>
+                                        </div>
+                                        <div className="item-info-place">{v.venue_name}</div>
 
-                                            <div className="item-info-extra">
-                                                <span className="extra-price">￥{v.min_price}</span>
-                                                <span className="extra-price-desc">起步</span>
-                                                <span className="extra-date">{v.pre_time}</span>
-                                                <span className="extra-date-desc">{v.status == 1 ? "开始" : "结束"}</span>
-                                            </div>
+                                        <div className="item-info-extra">
+                                            <span className="extra-price">￥{v.min_price}</span>
+                                            <span className="extra-price-desc">起步</span>
+                                            <span className="extra-date">{v.pre_time}</span>
+                                            <span className="extra-date-desc">{v.status == 1 ? "开始" : "结束"}</span>
                                         </div>
                                     </div>
-                                ))
-                            }
-
+                                </div>
+                            ))}
                         </div>
-                    </div>
+                    </div>):null}
+                    
                     {/* 专享折扣 */}
                     <div className="vip-discount">
                         <div className="vip-discount-title">
@@ -168,15 +166,14 @@ class Vip extends React.Component {
                         </div>
                         <div className="vip-discount-grid">
                             {/* 遍历折扣数据 */}
-                            {
-                                this.props.discountList.map(v => (
-                                    <div className="show-cell" key={v.schedular_id}>
-                                        <img src={v.pic} className="show-cell-img" alt="" />
-                                        <div className="show-cell-name">{v.schedular_name}</div>
-                                        <div className="show-cell-discount">{v.min_discount}折起</div>
-                                    </div>
-                                ))
-                            }
+                            {this.props.discountList ? (this.props.discountList.map(v => (
+                                <div className="show-cell" key={v.schedular_id}>
+                                    <img src={v.pic} className="show-cell-img" alt="" />
+                                    <div className="show-cell-name">{v.schedular_name}</div>
+                                    <div className="show-cell-discount">{v.min_discount}折起</div>
+                                </div>
+                            ))) : null}
+
 
                         </div>
                         <button className="vip-findmore">查看更多演出 <i className="iconfont iconsangedian1"></i></button>
@@ -187,15 +184,14 @@ class Vip extends React.Component {
                             <div className="title-font">免费观影</div>
                             <div className="title-use">可用0张<i></i></div>
                         </div>
-                        {
-                            this.props.freeList.map(v => (
-                                <div className="free-item" key={v.schedular_id}>
-                                    <img className="free-img" src={v.pic} alt="" />
-                                    <div className="free-item-name">{v.schedular_name}</div>
-                                    <div className="free-price">￥{v.is_through_ticket}<span className="free-delete">￥{v.price}</span></div>
-                                </div>
-                            ))
-                        }
+                        {this.props.freeList ? (this.props.freeList.map(v => (
+                            <div className="free-item" key={v.schedular_id}>
+                                <img className="free-img" src={v.pic} alt="" />
+                                <div className="free-item-name">{v.schedular_name}</div>
+                                <div className="free-price">￥{v.is_through_ticket}<span className="free-delete">￥{v.price}</span></div>
+                            </div>
+                        ))) : null}
+
                     </div>
                     {/* 双倍积分 */}
                     <div className="vip-double">
@@ -213,21 +209,25 @@ class Vip extends React.Component {
                 </section>
                 <button className="vip-btn">
                     立即开通
-                    <span  className="vip-btn-price">￥99</span>
-                    <span  className="vip-btn-unit">/年</span>
+                    <span className="vip-btn-price">￥99</span>
+                    <span className="vip-btn-unit">/年</span>
                 </button>
             </div>
         )
     }
+    back() {
+        // console.log(this.props);
+        this.props.history.go(-1)
+    }
     async componentDidMount() {
+        await this.props.getCardList();
+        await this.props.getDiscountList();
+        await this.props.getFreeList();
         let mySwiper = new Swiper('.coupon-swiper-wrapper', {
             direction: 'horizontal', // 垂直切换选项
             loop: false, // 循环模式选项
             slidesPerView: 1.118012,//滚动步长
         })
-        this.props.getCardList();
-        this.props.getDiscountList();
-        this.props.getFreeList();
         //优先购票接口数据
         // const { data } = await axios.get("https://api.juooo.com/vip/index/getPriorBuyList?page=1&limit=1000&version=6.0.5&referer=2")
         // //专享折扣数据
@@ -243,10 +243,10 @@ class Vip extends React.Component {
 
     }
 }
-export default connect(state=>(console.log(state),{
-    cardList:state.vip.cardList,
-    discountList:state.vip.discountList,
-    freeList:state.vip.freeList
+export default connect(state => ( {
+    cardList: state.vip.cardList,
+    discountList: state.vip.discountList,
+    freeList: state.vip.freeList
 }),
-dispatch=>bindActionCreators(vipCreator,dispatch)
-)(Vip)
+    dispatch => bindActionCreators(vipCreator, dispatch)
+)(withRouter(Vip))

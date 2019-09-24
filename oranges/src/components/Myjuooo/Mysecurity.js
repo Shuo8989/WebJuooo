@@ -1,14 +1,20 @@
 import React from 'react';
 import {NavLink,withRouter} from "react-router-dom";
-import Topscoll from '../punlic/Topscoll'
+import MyjuoooTop from './MyjuoooTop'
 import { Icon } from 'antd';
 import '../../assets/myjuooo/css/Mysecurity.css'
 import mypic from '../../assets/myjuooo/img/myjuooo-mypic.png'
+// 如果使用createBrowserHistory
+// // import {createBrowserHistory} from 'history'
+// import creatHistory from 'history/createBrowserHistory'
+// const history = creatHistory();
 class Mysecurity extends React.Component{
     render(){
+
+
         return(
             <div>
-                <Topscoll msg={"账户设置"} dis={"block"}></Topscoll>
+                <MyjuoooTop msg={"账户设置"} dis={"block"}></MyjuoooTop>
                 {/*设置*/}
 
                 <div className={"Mysecurity_mymsg"}>

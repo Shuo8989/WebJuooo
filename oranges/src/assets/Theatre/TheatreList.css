@@ -1,12 +1,18 @@
+.theatreList-bg{
+    background: #fff;
+}
 /*最顶上*/
 .navbar{
     height:47.219px;
     display: flex;
     justify-content:space-between;
 }
+.icon-menu-left{
+    line-height: 47.219px;
+}
 .icon-menu-left,.icon-option-horizontal{
     margin:0 20px; 
-    font-size: 0.7rem;
+    font-size: 0.5rem;
     
 }
 .icon-option-horizontal{
@@ -38,7 +44,7 @@
     height:46.03px;
 }
 /*热门演出*/
-.title{
+.theatreList-hot-title{
     font-size:0.5rem;
     font-weight: bold;
     color:#333;
@@ -86,13 +92,15 @@
 }
 /*加载更多*/
 .load-more{
-    height:32.88px;
-    margin:0.64rem 35% ;
-    border:1px solid #e6e6e6;
-    text-align: center;
+    /* height:32.88px; */
+    padding:0.64rem 35% ;
     line-height: 0.75rem;
     font-size: 0.33rem;
     color:inherit; 
+}
+.link{
+    text-align: center;
+    border:1px solid #ccc;
 }
 .load-more i{
     margin-left:4%;

@@ -1,21 +1,18 @@
 import React from 'react';
+<<<<<<< HEAD
 import {withRouter} from "react-router-dom";
 import Topscoll from '../punlic/Topscoll'
 import '../../assets/myjuooo/css/Mymoney.css'
+=======
+import {NavLink,withRouter} from "react-router-dom";
+>>>>>>> 3906d4851a9ed10668e99ac509a352d0954cdf62
 
 class Mymoney extends React.Component{
     render(){
         return(
             <div>
-                <Topscoll msg={"我的余额"} dis={"block"}></Topscoll>
-                <div className={"Mymoney_top"}>
-                    <p className={"Mymoney_yuan"}>账户余额(元)</p>
-                    <p className={"Mymoney_num"}>0.00</p>
-                </div>
-                <div className={"Mymoney_center"}>余额明细</div>
-                <div className={"Mymoney_but"}>
-                    <div className={"Mymoney_no"}>没有消息记录</div>
-                </div>
+                <p onClick={()=>{this.props.history.goBack()}}>{"<"}</p>
+                我是余额
             </div>
         )
     }

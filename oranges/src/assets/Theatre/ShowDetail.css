@@ -225,7 +225,8 @@
     font-size:.346rem;
     color:#232323;
     padding-top: .026rem; 
-    float: right;
+    /* float: right; */
+    margin-left:.4rem;
 }
 /*支持*/
 .benefit-item-support{
@@ -235,21 +236,23 @@
     font-size: 0.346rem;
     color:#999;
     line-height: .64rem;
-    margin:0 .4rem
-
+    margin:0  .4rem;
 }
 /*巡演城市*/
-.tour-cities,.remind,.recommend{
+.tour-cities,.remind,.recommend,.show-introduce{
     height: 4.026rem;
     background: #fefefe;
     overflow: hidden;
     margin-top:3.5%;
 }
+
 .tour-cities-top{
     height:1.586rem;
     display: flex;
     justify-content: space-between;
     margin:.12rem .4rem 0;
+    overflow-Y: hidden;
+    overflow-x: hidden
 }
 .tour-cities-top-name{
     font-size: .53rem;
@@ -264,9 +267,14 @@
 .tour-cities-top-number i{
     color:#ff6743;
 }
+.show-tour-cities-list{
+    display: flex;
+    overflow: scroll;
+    white-space: nowrap;
+}
 .tour-cities-list{
-    width:2.4rem;
-    height:1.653rem;
+    width:2.8rem;
+    height:1.8rem;
     border:.026rem solid #ebebeb;
     margin-left: .32rem;
     border-radius: 14%;
@@ -284,14 +292,31 @@
     height:.373rem;
     line-height:.373rem;
     color:#666;
-    margin-top:.2rem;
+    margin:.2rem .2rem 0 .2rem ;
+   
+}
+/*演出介绍*/
+.show-introduce{
+    height: auto;
+}
+.show-introduce-detail img{
+    width: 100%;
+    height:100%;
+    vertical-align: middle;
+    border: none;
+}
+.show-introduce-detail{
+    padding: 0 .4rem;
+    font-size: .4rem;
+    color:#232323;
 }
 /*温馨提醒*/
 .remind{
     height: auto;
 }
 .remind-list{
-    margin-top:.3rem;
+    margin:0 0 .3rem .3rem;
+    text-align: left;
 }
 .remind-info i{
     display:inline-block;
@@ -303,12 +328,14 @@
 .remind-info span{
     color: #999;
     font-size:.346rem;
-    margin-left:.346rem;
+    margin-left:.2rem;
     line-height:.346rem;
+    margin-right:.4rem
 }
 /*相关推荐*/
 .recommend{
     height: auto;
+    margin-bottom:1.466rem;
 }
 .recommend-show-item{
     height:4.88rem;
@@ -352,4 +379,71 @@
 }
 .recommend-num{
     margin-left: 1%;
+}
+/*底部栏*/
+.showDetail-footer{
+    height:1.4667rem;
+    border:1px solid #ebebeb;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom:0;
+    width:100%
+}
+.showDetail-footer span{
+    margin-left:4%;
+   margin-top:2%;
+   color: #666;
+}
+.showDetail-footer img{
+    width:.533rem;
+    height:.533rem;
+}
+.selectbuy,.selectBuy{
+    height:1.06rem;
+    width:8rem;
+    background-image:linear-gradient(50deg,#ff9a34,#ff4d4a);
+    border-radius: .533rem;
+    font-size:.453rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    line-height: 1.06rem;
+    margin-right:.32rem; 
+    margin-top:2%
+}
+/*抽屉 选座购买 样式*/
+.seat-chase-title{
+    font-size:.3733rem;
+    font-weight:700;
+    color:#232323;
+    line-height: 1.5rem;
+}
+ .seat-chase-box{
+    display: inline-block;
+    font-size:.3733rem;
+    color:#232323;
+    padding: 0 .48rem;
+    line-height: 1.066rem;
+    text-align: center;
+    height:1.066rem;
+    margin:0.1rem .2rem;
+    border:1px solid #ccc;
+}
+.selectBuy{
+    width:90%;
+    position: absolute;
+    bottom: 1.4%;
+}
+.activeStyle{
+    border:1px solid #ff6743;
+    color:#ff6743;
+    display: inline-block;
+    font-size:.3733rem;
+    padding: 0 .48rem;
+    line-height: 1.066rem;
+    text-align: center;
+    height:1.066rem;
+    margin:0.1rem .2rem
 }

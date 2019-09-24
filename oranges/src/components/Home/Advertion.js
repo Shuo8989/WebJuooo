@@ -18,7 +18,8 @@ import {
             pagination: {
                 el: '.banner-swiper-pagination',
             },
-        })  
+        })
+        console.log(this.props.classifyHome)
     }
     render(){
         const classifyHome=this.props.classifyHome;
@@ -28,8 +29,7 @@ import {
                     {
                         classifyHome.classifyHome.classify_list.map((v,i)=>(
                             <div key={i} className={"label-item__block"}>
-
-                                    <NavLink   className={"label-item__block__column"} to={'/show/showsLibrary'}>
+                                    <NavLink   className={"label-item__block__column"} to={'/show/showsLibrary/'+(v.category_id)}>
                                         <img src={v.pic} ait=""/>
                                         <span>{v.name}</span>
                                     </NavLink>
@@ -41,7 +41,7 @@ import {
                 {
                     classifyHome.vipHomeSchedular.priorList?(
                         <div className={'vip-ahead'}>
-                            <NavLink to={'/vip/index'}>
+                            <NavLink to={'/vip/index/1'}>
                                 <div className={'vip-ahead__advert__left'}>
                                     <span style={{fontSize:'.3rem',marginRight:'.1rem',fontWeight:'900'}}>优先购票</span>
                                     <span>VIP+会员尊享权益</span>
@@ -74,7 +74,7 @@ import {
                 <div className={"operation"}>
                     <ul className={"operation__ul operation--top"}>
                         <li className={'operation__item'}>
-                            <NavLink to={''} className={'operation__item__block1'}>
+                            <NavLink to={'/plus/index'} className={'operation__item__block1'}>
                                 <div>
                                     <h3 className={'operation__item__block__title'}>{classifyHome.classifyHome.operation_list[0].name}</h3>
                                     <p dangerouslySetInnerHTML={{__html:classifyHome.classifyHome.operation_list[0].describe }}></p>
@@ -85,7 +85,7 @@ import {
                             </NavLink>
                         </li>
                         <li className={'operation__item'}>
-                            <NavLink to={''} className={'operation__item__block1'}>
+                            <NavLink to={'/vip/index/1'} className={'operation__item__block1'}>
                                 <div>
                                     <h3 className={'operation__item__block__title'}>{classifyHome.classifyHome.operation_list[1].name}</h3>
                                     <p dangerouslySetInnerHTML={{__html:classifyHome.classifyHome.operation_list[1].describe }}></p>
@@ -109,7 +109,7 @@ import {
                             </NavLink>
                         </li>
                         <li className={'operation__item'}>
-                            <NavLink to={''} className={'operation__item__block2'}>
+                            <NavLink to={'/calendar/index/0'} className={'operation__item__block2'}>
                                 <div>
                                     <h3 className={'operation__item__block__title'}>{classifyHome.classifyHome.operation_list[3].name}</h3>
                                     <p dangerouslySetInnerHTML={{__html:classifyHome.classifyHome.operation_list[3].describe }}></p>
@@ -120,7 +120,7 @@ import {
                             </NavLink>
                         </li>
                         <li className={'operation__item'}>
-                            <NavLink to={''} className={'operation__item__block2'}>
+                            <NavLink to={'/Cardproduct/index'} className={'operation__item__block2'}>
                                 <div>
                                     <h3 className={'operation__item__block__title'}>{classifyHome.classifyHome.operation_list[4].name}</h3>
                                     <p dangerouslySetInnerHTML={{__html:classifyHome.classifyHome.operation_list[4].describe }}></p>

@@ -1,88 +1,59 @@
 import React from 'react';
 import '../../assets/Theatre/ShowDetail.css';
-import {NavLink} from 'react-router-dom'
+import {withRouter} from 'react-router-dom';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import showDetailList from '../../store/actionCreator/Theatre/ShowDetailList';
+import RelatedRecommend from './public/RelatedRecommendations';
+import PerformanceIntroduction from './public/PerformanceIntroduction';
+import TourCity from './public/TourCity';
+import Arrangement from './public/Arrangement';
+import PerformanceDetails from './public/PerformanceDetails';
+import SeatPurchase from './public/SeatPurchase';
+
+
 class ShowDetail extends React.Component{
+    constructor(props){
+        super(props);
+        this.state={
+             showid:this.props.match.params.id,
+        }
+    }
     render(){
-        return(
+        //路由传过来的数据
+        // console.log(this.props.ShowDetailInfo.item_list);
+        let headeInfo=this.props.ShowDetailInfo||{};
+        let static_data=headeInfo.static_data||{};
+        let show_list=static_data.show_notice||{};
+        //演出详情
+        let shareData=this.props.ShowDetailInfo;
+        //详情安排
+        let admission=this.props.ShowDetailInfo.static_data;
+        //巡演城市获取数据
+        let TourCityList=this.props.TourCityList.tour_list;
+        //演出介绍
+        let  ShowIntroduction=this.props.ShowDetailInfo.static_data.show_desc;
+        //相关推荐获取数据
+        let ShowRecommend=this.props.ShowRecommend;
+        //购买选座
+        let date=this.props.ShowDetailInfo.item_list;
+       return(
             <div>
                <div className="bg-warp"> 
                 {/* 演出详情位置 */}
-                <div className="brief-primary">
-                    <img className="bg-pic" src='https://image.juooo.com/group1/M00/02/C7/rAoKmV0ZvraAK32GAAA65fDJuB8087.jpg'/>
-                    <div className="bg"></div>
-                    <div className="show-detail-top">
-                        <NavLink to="theatre/theatreList" className="top-left">&lt;</NavLink>
-                        <span >演出详情</span>
-                        <span className="top-right">
-                            <i>...</i>
-                            <i>???</i>
-                        </span>
-                    </div>
-                    <div className="show-detail-top-info">
-                        <img className="show-detail-top-info-pic" src="https://image.juooo.com/group1/M00/02/C7/rAoKmV0ZvraAK32GAAA65fDJuB8087.jpg"/>
-                        <div className="brief-primary-content-info">
-                            <p className="brief-primary-content-name">法语音乐剧《摇滚红与黑》-石家庄</p>
-                            <p className="brief-primary-price">￥180-890</p>
-                        </div>
-                    </div>
-                </div>
-                {/* 演出详情下面部分 */}
-                <div className="brief-secondary">
-                    <div className="brief-secondary-info">
-                        <p className="brief-secondary-date">09/27 - 09/28 <i><img className="brief-secondary-date-icon" src={require("../../assets/Theatre/img/icon-jiao.png")}/></i></p>
-                        <p className="brief-secondary-address"> 石家庄 | 石家庄大剧院-大剧场</p>
-                    </div>
-                    <div className="brief-secondary-pointer">
-                        
-                    </div>
-                </div>
+                {shareData.share_data.share_pic?<PerformanceDetails shareData={shareData}></PerformanceDetails>:null}
                 {/* plus会员卡提示框 */}
                 <div className="detail-plus-tips">
                     <span className="detail-plus-card">橙PLUS卡</span>
-                    <span className="detail-plus-content">开通送￥100 最高省98元</span>
+                    <span className="detail-plus-content">开通送￥100 最高省{static_data.discount_max_price}元</span>
                     <span className="detail-plus-open-card">立即开卡<i>&gt;</i></span>
                 </div>
                 {/* 详情安排 */}
-                <div className="brief-schedule">
-                    <div className="benefit-item">
-                        <span>领券：</span>
-                        <span>
-                            <i>满100减10</i>
-                            <i>满300减30</i>
-                        </span>
-                        <span className="more"><img src={require("../../assets/Theatre/img/0.png")}/></span>
-                    </div>
-                    <div className="benefit-item-plus">
-                        <span>VIP+：</span>
-                        <span><i className="member">V+会员享</i><i className="integral">国内免邮+双倍积分</i></span>
-                        <span><img src={require("../../assets/Theatre/img/icon-jiao.png")}/></span>
-                    </div>
-                    <div className="benefit-item-admission">
-                        <span>入场：</span>
-                        <span className="benefit-item-admission-content">1米以上或5周岁以上儿童凭票入场,其他儿童谢绝入场</span>
-                    </div>
-                    <div className="benefit-item-support">
-                        <span>支持：</span>
-                        <span className="seat">在线选座</span>|
-                        <span className="seat">电子票</span>|
-                        <span className="seat">同城满200免邮</span>
-                    </div>
-                </div>
+                {admission.tips?<Arrangement Admission={admission.tips.desc} support={admission.support.list}></Arrangement>:null}
                 {/* 巡演城市 */}
-                <div className="tour-cities">
-                    <p className="tour-cities-top">
-                        <span className="tour-cities-top-name">巡演城市</span>
-                        <span className="tour-cities-top-number"><i>23</i>场<i><img className="brief-secondary-date-icon" src={require("../../assets/Theatre/img/icon-jiao.png")}/></i></span>
-                    </p>
-                    <div className="tour-cities-list">
-                        <p className="tour-cities-list-name">石家庄</p>
-                        <p className="tour-cities-list-date">09/27-09/28</p>
-                    </div>
-                </div>
+                {TourCityList?<TourCity tourCity={TourCityList}></TourCity>:null}
                 {/* 演出介绍*/}
-                <div className="introduce">
-
-                </div>
+                {ShowIntroduction?<PerformanceIntroduction showIntroduction={ShowIntroduction.desc}></PerformanceIntroduction>:null}
                 {/*温馨提醒 */}
                 <div className="remind">
                     <p className="tour-cities-top">
@@ -90,36 +61,34 @@ class ShowDetail extends React.Component{
                         <span className="tour-cities-top-number"><img className="brief-secondary-date-icon" src={require("../../assets/Theatre/img/icon-jiao.png")}/></span>
                     </p>
                     <div className="remind-list">
-                        <span className="remind-info">
-                            <i></i>
-                            <span>配送说明</span>
-                        </span>
+                        {show_list.list?show_list.list.map((v,i)=>(
+                            <span key={i} className="remind-info">
+                                <i></i>
+                                <span>{v.title}</span>
+                            </span>
+                            )):null} 
                     </div>
                 </div>
                 {/* 相关推荐 */}
-                <div className="recommend">
-                    <p className="tour-cities-top">
-                        <span className="tour-cities-top-name">相关推荐</span>
-                    </p>
-                    <div className="recommend-list-wrap">
-                        <a className="recommend-show-item">
-                            <img src="https://image.juooo.com/group1/M00/03/A5/rAoKNV1dEZKAED6xAAB_-x8YGi8858.jpg" alt=""/>
-                            <div className="recommend-show-right">
-                                <p className="recommend-date">10/05-10/06</p>
-                                <p className="recommend-name">音乐剧</p>
-                                <p className="recommend-address">石家庄大剧院</p>
-                                <p className="recommend-price">
-                                    <span>￥</span>
-                                    <span className="recommend-num">380</span>
-                                    <span>起</span>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+                {ShowRecommend.list?<RelatedRecommend showRecommend={ShowRecommend.list}></RelatedRecommend>:null}
+                {/* 查看更多演出 */}
+                {/* 底部栏 */}
+                <SeatPurchase project_time={date}></SeatPurchase>
             </div>
         </div>
         )
     }
+    componentDidMount(){
+        this.props.getHeadeInfo({id:this.state.showid});
+        this.props.getTourCity();
+        this.props.getShowRecommend();
+    }
 }
-export default ShowDetail;
+function mapActionToState(state){
+    return{
+        ShowDetailInfo:state.ShowDetailList.ShowDetailInfo,
+        TourCityList:state.ShowDetailList.TourCityList,
+        ShowRecommend:state.ShowDetailList.ShowRecommend
+    }
+}
+export default connect(mapActionToState,(dispatch)=>bindActionCreators(showDetailList,dispatch))(withRouter(ShowDetail));

@@ -38,13 +38,74 @@
         .card-wrap {
             width: 309.13px;
             height: 163.1px;
-            outline: 1px solid red;
             margin: .4rem .70667rem .66667rem;
             border-radius: .26667rem;
             overflow: hidden;
+            position: relative;
 
             img {
                 width: 100%
+            }
+
+            .card-name {
+                position: absolute;
+                width: 280.33px;
+                height: 24.8px;
+                top: 10px;
+                left: 15px;
+                text-align: left;
+
+                .card-name-pri {
+                    font-size: .53333rem;
+                    font-weight: 700;
+                    color: #fff;
+                    display: inline-block;
+                    text-shadow: 0 0.08rem 0.14667rem rgba(0, 0, 0, .1);
+
+                }
+
+                .card-name-sec {
+                    display: inline-block;
+                    background: hsla(0, 0%, 100%, .16);
+                    border-radius: .05333rem;
+                    font-size: .26667rem;
+                    color: #f0f0f0;
+                    line-height: .61333rem;
+                    padding-top: 1px;
+                    box-sizing: border-box;
+                    width: .8rem;
+                    height: .42667rem;
+                    line-height: .42667rem;
+                    margin-left: .26667rem;
+                    text-align: center;
+                }
+            }
+
+            .card-limit {
+                position: absolute;
+                left: 0.4rem;
+                bottom: .22667rem;
+                width: 280.33px;
+                height: 32px;
+                display: flex;
+                align-items: center;
+
+                .card-limit-price {
+                    font-size: .66667rem;
+                    font-weight: 700;
+                    color: #fff;
+                    display: inline-block;
+                    flex-grow: 1;
+                    text-align: left;
+                }
+
+                .card-limit-date {
+                    font-size: .32rem;
+                    color: #fff;
+                    display: inline-block;
+                    height: .32rem;
+                    line-height: .32rem;
+                }
             }
         }
 
@@ -119,25 +180,41 @@
                     width: 2.93333rem;
                     height: 4rem;
                     flex-shrink: 0;
-                    border: 1px solid red
                 }
-                .item-info{
+
+                .item-info {
                     margin-left: .38667rem;
                     width: 211.7px;
                     height: 4rem;
-                    .date{
+                    text-align: left;
+
+
+                    .info-date {
                         margin-top: .21333rem;
                         display: flex;
                         align-items: center;
                         color: #232323;
+
+                        display: inline-block;
+                        font-weight: 700;
+                        height: .42667rem;
+                        line-height: .42667rem;
+                        font-size: .42667rem;
                     }
-                    .name{
+
+                    .info-name {
                         display: flex;
                         align-items: center;
                         flex-wrap: wrap;
                         height: 2.02667rem;
+                        color: #232323;
+                        word-break: break-all;
+                        text-overflow: ellipsis;
+                        font-weight: 700;
+                        font-size: 0.45333rem;
                     }
-                    .place{
+
+                    .info-place {
                         font-size: .32rem;
                         color: #666;
                         text-overflow: ellipsis;
@@ -147,12 +224,49 @@
                         height: .32rem;
                         line-height: .32rem;
                     }
-                    .ratio{
-                        border: 1px solid red;
-                        width: 50.75px;
-                        height: 28px;
-                        margin-top: 6px;
 
+                    .info-ratio {
+                        width: 75px;
+                        height: 28px;
+                        color: #ff6743;
+                        font-size: .32rem;
+                        font-weight: 700;
+                        vertical-align: middle;
+
+                        span {
+                            color: #999;
+                            font-size: .58667rem;
+                            transform: scale(.5);
+                            transform-origin: 55% 75%;
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+
+            .more {
+                width: 331.2px;
+                height: 44.15px;
+
+                button {
+                    border: 1px solid #ff6743;
+                    color: #ff6743;
+                    width: 4.24rem;
+                    height: .96rem;
+                    align-items: center;
+                    display: flex;
+                    justify-content: center;
+                    font-size: .4rem;
+                    border-radius: .16rem;
+                    background: #fff;
+                    line-height: 1;
+                    padding: 0 .4rem;
+                    margin: 0 auto;
+
+                    i {
+                        margin-left: .16rem;
+                        font-size: .32rem;
+                        color: #ff6743;
                     }
                 }
             }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Icon } from 'antd';
 import '../../assets/myjuooo/css/MyjuoooTop.css'
-import {NavLink,withRouter} from "react-router-dom";
+import {withRouter} from "react-router-dom";
 import { Popover, Button } from 'antd';
 const content = (
     <div className={"MyjuoooTop_point_box"}>

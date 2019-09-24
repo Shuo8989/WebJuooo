@@ -1,0 +1,9 @@
+.Myorder_noList{
+    width: 100%;
+    margin-top: 3.467rem;
+    height: 3.733rem;
+    background: url("../img/Myorder_bg.png") no-repeat center;
+    background-size: 3.467rem 2.133rem;
+    padding-top:3.5rem ;
+    color: #999999;
+}

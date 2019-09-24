@@ -58,7 +58,7 @@ class Myjuooo extends React.Component{
                 <div className="myjuooo_mine_box">
                     <MyjuoooMy src={order} msg={"我的订单"} to={"/my/myOrderList"}></MyjuoooMy>
                     <MyjuoooMy src={ticketholder} msg={"我的票夹"} to={"/eticket/list"}></MyjuoooMy>
-                    <MyjuoooMy src={cardpackage} msg={"我的卡包"} to={"Cardproduct/index?current=mine"} ></MyjuoooMy>
+                    <MyjuoooMy src={cardpackage} msg={"我的卡包"} to={"/Cardproduct/index"} ></MyjuoooMy>
                     <div className="myjuooo_my"></div>
                 </div>
 

@@ -9,6 +9,7 @@ class Theatre extends React.Component{
                 <header className="title-text-sigle">
                     <h3>剧院</h3>
                 </header>
+                <div className="theatre-height"></div>
                 <TheatreInfo></TheatreInfo>
             </div>
         )

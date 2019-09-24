@@ -24,12 +24,6 @@ const upTourRecommmend=(payload)=>{//巡回演出
         payload  
     }
 }
-const uprecommendlist=(payload)=>{//巡回演出
-    return{
-        type:homeType.UP_RECOMMEND_LIST,
-        payload  
-    }
-}
 export default{
     getClassifyHome({city_id,city_abridge}){//获取上部信息
         return async (dispatch)=>{
@@ -57,11 +51,5 @@ export default{
             const {data}= await axios.get('/Apijcw/home/index/getTourRecommendList?city_id=0&version=6.0.5&referer=2')
             dispatch(upTourRecommmend(data))
         }
-    },
-    getRecommendList({page}){//巡回演出
-        return async (dispatch)=>{
-            const {data}= await axios.get(`/Apijcw/home/index/getRecommendShow?cityAdd=&page=${page}&version=6.0.5&referer=2`)
-            dispatch(uprecommendlist(data))
-        }
-    },
+    }
 }

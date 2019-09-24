@@ -1,19 +1,13 @@
-<<<<<<< HEAD
-﻿import React from 'react';
+import React from 'react';
 import {withRouter} from "react-router-dom";
 import Topscoll from '../punlic/Topscoll'
 import '../../assets/myjuooo/css/ChangePayPsw.css'
-=======
-import React from 'react';
-import {NavLink,withRouter} from "react-router-dom";
-import MyjuoooTop from './MyjuoooTop'
 
->>>>>>> 3906d4851a9ed10668e99ac509a352d0954cdf62
+
 class ChangePayPsw extends React.Component{
     render(){
         return(
             <div>
-<<<<<<< HEAD
                 <Topscoll msg={"修改支付密码"} dis={"none"}></Topscoll>
                 <div className={"ChangePP_top"}>
                     <span className={"Change_PP_top_left"}>1.验证手机</span>
@@ -30,10 +24,6 @@ class ChangePayPsw extends React.Component{
                     </div>
                     <div className={"changLoginPSW_btn"}>下一步</div>
                 </div>
-=======
-                <MyjuoooTop msg={"修改支付密码"} dis={"none"}></MyjuoooTop>
-                我是支付密码
->>>>>>> 3906d4851a9ed10668e99ac509a352d0954cdf62
             </div>
         )
     }

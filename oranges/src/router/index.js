@@ -20,7 +20,6 @@ import Mymoney from '../components/Myjuooo/Mymoney'
 import Myintegral from '../components/Myjuooo/Myintegral'
 import CouponExchange from '../components/Myjuooo/CouponExchange'
 import MyOrderList from '../components/Myjuooo/MyOrderList'
-import Cardproduct from '../components/Myjuooo/Cardproduct'
 import Myaddress from '../components/Myjuooo/Myaddress'
 import Feedback from '../components/Myjuooo/Feedback'
 //登陆注册(完成)
@@ -60,7 +59,6 @@ export default [{ //首页
             isLogin: false
         }
     },
-<<<<<<< HEAD
     {//剧院列表
         to:'/theatre/index/:id',
         path:'/theatre/index/:id',
@@ -74,35 +72,14 @@ export default [{ //首页
     },
     {//表演详情
         to:'/ticket/:id',
-        path:'/ticket/:id', 
+        path:'/ticket/:id',
         context:'演出详情',
         component:ShowDetail,
         meta:{
             title:'聚橙网',
             isButton:false,
             isLogin:false
-=======
-    { //剧院列表
-        to: '/theatre/index',
-        path: '/theatre/index',
-        context: '剧院列表信息',
-        component: TheatreList,
-        meta: {
-            title: '聚橙网',
-            isButton: false,
-            isLogin: false
-        }
-    },
-    { //表演详情
-        to: '/ticket',
-        path: '/ticket',
-        context: '演出详情',
-        component: ShowDetail,
-        meta: {
-            title: '聚橙网',
-            isButton: false,
-            isLogin: false
->>>>>>> c5dea3d7150c25cb7f43a944e76786441e7d15dd
+
         }
     },
     { //票夹
@@ -222,20 +199,7 @@ export default [{ //首页
             isButton: false,
             isLogin: true
         }
-    },
-    { //我的-卡包
-        to: '/Cardproduct/index',
-        path: '/Cardproduct/index',
-        context: '我的卡包',
-        component: Cardproduct,
-        exact: true,
-        meta: {
-            title: '聚橙网',
-            isButton: false,
-            isLogin: true
-        }
-    },
-    { //我的-地址
+    }, { //我的-地址
         to: '/myjuooo/myaddress',
         path: '/myjuooo/myaddress',
         context: '我的地址',
@@ -330,7 +294,7 @@ export default [{ //首页
             isLogin: false,
         }
     },
-    { //购买新卡界面  
+    { //购买新卡界面
         to: '/Cardproduct/index',
         path: '/Cardproduct/index',
         context: '购买新卡',
@@ -342,7 +306,7 @@ export default [{ //首页
             isLogin: false,
         }
     },
-<<<<<<< HEAD
+
     {//演唱会
         path:'/show/showsLibrary/:id',
         context:'演唱会',
@@ -360,10 +324,10 @@ export default [{ //首页
         component:Calendar,
         exact:true,
         meta:{
-            title:'日历',
-            isButton:false,
-            isLogin:false
-=======
+        title:'日历',
+        isButton:false,
+        isLogin:false
+    }},
     {//新卡详情界面
         to: '/Cardproduct/buyShow/card_id/:id',
         path: '/Cardproduct/buyshow/card_id/:id',
@@ -376,16 +340,6 @@ export default [{ //首页
             isLogin: false,
         }
 
-    }, {
-        path: '/show/showsLibrary',
-        context: '演唱会',
-        component: Vocalconcert,
-        exact: true,
-        meta: {
-            title: '演出',
-            isButton: false,
-            isLogin: false
->>>>>>> 3f6a96d68b80c67033ec555db948e3b3c63a4aa0
-        }
-    }
+    },
+
 ]

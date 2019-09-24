@@ -6,7 +6,7 @@
     text-align: center;
     position: relative;
 }
-.library_title{
+.MyjuoooTop{
     position: fixed;
     top: 0;
     left: 0;
@@ -211,4 +211,17 @@
 }
 .more a{
     color: #999999;
+}
+.ant-drawer-body ul li{
+    float: left;
+    text-align: center;
+    width: 2.24rem;
+    height: .85333rem;
+    line-height: .85333rem;
+    border-radius: .05333rem;
+    background-color: #f5f5f5;
+    color: #232323;
+    font-size: .32rem;
+    margin-right: .16rem;
+    margin-bottom: .16rem;
 }

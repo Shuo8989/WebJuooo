@@ -331,7 +331,7 @@ export default[
         }
     },
     {//演唱会
-        path:'/show/showsLibrary',
+        path:'/show/showsLibrary/:id',
         context:'演唱会',
         component:Vocalconcert,
         exact:true,
@@ -342,7 +342,7 @@ export default[
         }
     },
     {//演出
-        path:'/calendar/index',
+        path:'/calendar/index/:id',
         context:'日历',
         component:Calendar,
         exact:true,

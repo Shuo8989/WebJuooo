@@ -18,7 +18,8 @@ import {
             pagination: {
                 el: '.banner-swiper-pagination',
             },
-        })  
+        })
+        console.log(this.props.classifyHome)
     }
     render(){
         const classifyHome=this.props.classifyHome;
@@ -28,8 +29,7 @@ import {
                     {
                         classifyHome.classifyHome.classify_list.map((v,i)=>(
                             <div key={i} className={"label-item__block"}>
-
-                                    <NavLink   className={"label-item__block__column"} to={'/show/showsLibrary'}>
+                                    <NavLink   className={"label-item__block__column"} to={'/show/showsLibrary/'+(v.category_id)}>
                                         <img src={v.pic} ait=""/>
                                         <span>{v.name}</span>
                                     </NavLink>
@@ -109,7 +109,7 @@ import {
                             </NavLink>
                         </li>
                         <li className={'operation__item'}>
-                            <NavLink to={'/calendar/index'} className={'operation__item__block2'}>
+                            <NavLink to={'/calendar/index/0'} className={'operation__item__block2'}>
                                 <div>
                                     <h3 className={'operation__item__block__title'}>{classifyHome.classifyHome.operation_list[3].name}</h3>
                                     <p dangerouslySetInnerHTML={{__html:classifyHome.classifyHome.operation_list[3].describe }}></p>

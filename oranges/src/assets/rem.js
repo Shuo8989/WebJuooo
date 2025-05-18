@@ -4,10 +4,10 @@
         recalc = function () {
             var clientWidth = docEl.clientWidth;
             if (!clientWidth) return;
-            if(clientWidth>=640){
+            if (clientWidth >= 640) {
                 docEl.style.fontSize = '54px';
-            }else{
-                docEl.style.fontSize =100*(clientWidth /1000) + 'px';
+            } else {
+                docEl.style.fontSize = 100 * (clientWidth / 1000) + 'px';
             }
         };
 
